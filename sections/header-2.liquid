@@ -1,9 +1,25 @@
+{{ 'section-header-2.css' | asset_url | stylesheet_tag }}
+
 <div class="header-2">
   <div class="header-2__top-header">
     <div class="top-header__left-container">
       <p class="left-container__currency-converter">Currency: GBP</p>
     </div>
-    <div class="top-header__right-container"></div>
+    <div class="top-header__right-container">
+      <ul class="right-container__account-menu">
+        <li>Register</li>
+        <li>Sign In</li>
+      </ul>
+      <ul class="right-container__cart">
+        <a href="{{ routes.cart_url }}">
+          {%- if cart == empty -%}
+              {{ 'empty' }}
+          {%- else -%}
+              {{ cart.item_count }}
+          {%- endif -%}
+        </a>
+      </ul>
+    </div>
   </div>
   <div class="header-2__bottom-header"></div>
 </div>

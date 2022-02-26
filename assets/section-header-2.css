@@ -1,0 +1,28 @@
+.header-2__top-header {
+  display: flex;
+  justify-content: center;
+}
+
+.top-header__left-container, .top-header__right-container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.top-header__right-container > .right-container__account-menu {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.top-header__right-container > .right-container__account-menu > li {
+  padding: 0 15px;
+}
+
+.top-header__right-container > .right-container__cart {
+  display: flex;
+}
+
+.top-header__right-container > .right-container__cart > a {
+  text-decoration: none;
+}
