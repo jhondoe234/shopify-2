@@ -1,10 +1,12 @@
 .header-2__top-header {
+  height: 45px;
   display: flex;
   justify-content: center;
 }
 
 .top-header__left-container, .top-header__right-container {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 50%;
 }
@@ -13,6 +15,7 @@
   list-style: none;
   display: flex;
   padding: 0;
+  margin-right: 50px;
 }
 
 .top-header__right-container > .right-container__account-menu > li {
@@ -21,8 +24,13 @@
 
 .top-header__right-container > .right-container__cart {
   display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0;
+  height: fit-content;
 }
 
 .top-header__right-container > .right-container__cart > a {
   text-decoration: none;
+  padding: 0 10px 0 20px;
 }
