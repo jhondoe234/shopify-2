@@ -3,6 +3,7 @@
 {%- style -%}
   .header-2__top-header {
     background-color: {{ section.settings.top_header_background_color }};
+    font-family: {{ section.settings.top_header_font_family }};
   }
 
   .top-header__left-container, .top-header__right-container {
@@ -51,11 +52,17 @@
     "tag": "section",
     "settings": [
       {
+        "type": "font_picker",
+        "id": "top_header_font_family",
+        "label": "Top Header Font Family",
+        "default": "helvetica_n4"
+      },
+      {
         "type": "color",
         "id": "top_header_font_color",
         "label": "Top Header Font Color",
         "default": "#999999"
-      }, 
+      },
       {
         "type": "color",
         "id": "top_header_background_color",
