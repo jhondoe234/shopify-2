@@ -1,5 +1,24 @@
 {{ 'section-header-2.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  .header-2__top-header {
+    background-color: {{ section.settings.top_header_background_color }};
+  }
+
+  .top-header__left-container, .top-header__right-container {
+    color: {{ section.settings.top_header_font_color }};
+  }
+  
+  .top-header__right-container > .right-container__cart > .fa-cart-shopping, .fa-angle-down, a {
+    color: {{ section.settings.top_header_cart_color }};
+  }
+
+  .top-header__right-container > .right-container__cart {
+    background-color: {{ section.settings.top_header_cart_background_color }};
+    height: 100%;
+  }
+{%- endstyle -%}
+
 <div class="header-2">
   <div class="header-2__top-header">
     <div class="top-header__left-container">
@@ -14,14 +33,47 @@
         <i class="fa-solid fa-cart-shopping"></i>
         <a href="{{ routes.cart_url }}">
           {%- if cart == empty -%}
-              {{ 'empty' }}
+            {{ 'empty' }}
           {%- else -%}
-              {{ cart.item_count }}
+            {{ cart.item_count }}
           {%- endif -%}
         </a>
-        <i class="fa-thin fa-angle-down"></i>
+        <i class="fa-light fa-angle-down fa-xs"></i>
       </ul>
     </div>
   </div>
   <div class="header-2__bottom-header"></div>
 </div>
+
+{% schema %}
+  {
+    "name": "header-2",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "top_header_font_color",
+        "label": "Top Header Font Color",
+        "default": "#999999"
+      }, 
+      {
+        "type": "color",
+        "id": "top_header_background_color",
+        "label": "Top Header Background Color",
+        "default": "#333333"
+      },
+      {
+        "type": "color",
+        "id": "top_header_cart_color",
+        "label": "Top Header Cart Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "top_header_cart_background_color",
+        "label": "Top Header Cart Background Color",
+        "default": "#00c8c8"
+      }
+    ]
+  }
+{% endschema %}
