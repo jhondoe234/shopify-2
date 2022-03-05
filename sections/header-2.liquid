@@ -3,11 +3,20 @@
 {%- style -%}
   .header-2__top-header {
     background-color: {{ section.settings.top_header_background_color }};
-    font-family: {{ section.settings.top_header_font_family }};
+    font-family: {{ section.settings.top_header_font_family.family }};
+    font-size: 1.2rem;
   }
 
   .top-header__left-container, .top-header__right-container {
     color: {{ section.settings.top_header_font_color }};
+  }
+
+  .fa-cart-shopping {
+    font-size: 1.5rem;
+  }
+
+  .top-header__right-container {
+    padding-right: 10%;
   }
   
   .top-header__right-container > .right-container__cart > .fa-cart-shopping, .fa-angle-down, a {
