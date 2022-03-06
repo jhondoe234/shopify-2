@@ -34,3 +34,13 @@
   text-decoration: none;
   padding: 0 10px 0 20px;
 }
+
+.header-2__bottom-header {
+  height: 95px;
+  display: flex;
+  align-items: center;
+}
+
+.header-2__bottom-header > a {
+  padding: 0 5%;
+}

@@ -52,7 +52,27 @@
       </ul>
     </div>
   </div>
-  <div class="header-2__bottom-header"></div>
+  <div class="header-2__bottom-header">
+    <div class="bottom-header__left-container">
+      <a href="{{ routes.root_url }}">
+        {%- if section.settings.logo != blank -%}
+          <img
+            src="{{ section.settings.logo | img_url: 'medium' }}"
+            loading="lazy"
+            width="auto"
+            height="auto"
+            alt="logo"
+          >
+        {%- endif -%}
+      </a>      
+    </div>
+    
+    <div class="bottom-header__right-container">
+      
+    </div>
+
+
+  </div>
 </div>
 
 {% schema %}
@@ -89,6 +109,11 @@
         "id": "top_header_cart_background_color",
         "label": "Top Header Cart Background Color",
         "default": "#00c8c8"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
       }
     ]
   }
