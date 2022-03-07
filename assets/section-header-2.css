@@ -1,3 +1,7 @@
+.header-2 {
+  z-index: 2;
+}
+
 .header-2__top-header {
   height: 45px;
   display: flex;
@@ -41,6 +45,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .bottom-header__right-container {
@@ -67,9 +74,10 @@
 .bottom-header__right-container > .fg--search > input {
   height: 28px;
   border-radius: 0;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #c2c2c2;
   padding: 10px;
   margin-left: 80px;
+  background-color: transparent;
 }
 
 .bottom-header__right-container > .fg--search > input:focus {
