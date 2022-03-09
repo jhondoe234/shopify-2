@@ -1,0 +1,45 @@
+{{ 'section-multicolumn2.css' | asset_url | stylesheet_tag }}
+
+<div class="multicolumn2">
+  {%- for block in section.blocks -%}
+    <div class="multicolumn2__column" background-image={{ section.blocks.background_image }}>
+      <h3 class="multicolumn2__column-title">{{ section.blocks.column_title }}</h3>
+      <p class="multicolumn2__column-description">{{ section.blocks.column_description }}</p>
+      <button class="multicolumn2__column-button">{{ section.blocks.column_button_text }}</button>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+  {
+    "name": "multicolumn2",
+    "blocks": [
+      {
+        "name": "Slide",
+        "type": "slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "column_title",
+            "label": "Column Title"
+          },
+          {
+            "type": "text",
+            "id": "column_description",
+            "label": "Column Description"
+          },
+          {
+            "type": "text",
+            "id": "column_button_text",
+            "label": "Column Button Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
