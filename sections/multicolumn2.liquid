@@ -2,10 +2,14 @@
 
 <div class="multicolumn2">
   {%- for block in section.blocks -%}
-    <div class="multicolumn2__column" background-image={{ section.blocks.background_image }}>
-      <h3 class="multicolumn2__column-title">{{ section.blocks.column_title }}</h3>
-      <p class="multicolumn2__column-description">{{ section.blocks.column_description }}</p>
-      <button class="multicolumn2__column-button">{{ section.blocks.column_button_text }}</button>
+    <div class="multicolumn2__column" style="background-image: url('{{ block.settings.background_image | img_url: 'master' }}')">
+      <div class="multicolumn2__column-content">
+        <img class="multicolumn2__column-title" src="{{ block.settings.column_title | img_url: 'medium' }}" loading="lazy" width="auto" height="auto">
+        <p class="multicolumn2__column-description">{{ block.settings.column_description }}</p>
+        <a href="{{ section.blocks.settings.column_button_url }}">
+          <button class="multicolumn2__column-button">{{ block.settings.column_button_text }}</button>        
+        </a>        
+      </div>
     </div>
   {%- endfor -%}
 </div>
@@ -15,8 +19,8 @@
     "name": "multicolumn2",
     "blocks": [
       {
-        "name": "Slide",
-        "type": "slide",
+        "name": "Column",
+        "type": "column",
         "settings": [
           {
             "type": "image_picker",
@@ -24,7 +28,7 @@
             "label": "Background Image"
           },
           {
-            "type": "text",
+            "type": "image_picker",
             "id": "column_title",
             "label": "Column Title"
           },
@@ -34,9 +38,30 @@
             "label": "Column Description"
           },
           {
+            "type": "url",
+            "id": "column_button_url",
+            "label": "Column Button URL"
+          },
+          {
             "type": "text",
             "id": "column_button_text",
             "label": "Column Button Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Columns",
+        "blocks": [
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
           }
         ]
       }
