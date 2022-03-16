@@ -1,37 +1,40 @@
-.multicolumn2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5%;
-}
-
 .multicolumn2 > .multicolumn2__column {
   background-repeat: no-repeat;
   background-size: cover;
-  width: 662px;
-  height: 529px;
+  width: 100%;
+  height: fit-content;
   padding: 2.5%;
-  margin: 0 10px;
+  margin-bottom: 10%;
 }
 
 .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content {
-  width: 50%;
-  float: right;
+  width: 100%;
+  float: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: end;
   padding-top: 5%;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+.multicolumn2 > .multicolumn2__column > .multicolumn2__column-content > img {
+  width: 50%;
 }
 
 .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content > .multicolumn2__column-description {
+  font-size: 12px;
   text-align: right;
+  width: 50%;
 }
 
+
 .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content > a > button.multicolumn2__column-button {
-  border: 1px solid black;
-  background-color: transparent;
+  border: 1px solid #00c8c8;
+  background-color: #00c8c8;
   border-radius: 0px;
-  color: black;
+  color: white;
   width: 179px;
   height: 59px;
   text-transform: uppercase;
@@ -44,4 +47,48 @@
   border: 1px solid #00c8c8;
   color: white;
   cursor: pointer;
+}
+
+@media screen and (min-width: 990px) {
+  .multicolumn2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+  }
+
+  .multicolumn2 > .multicolumn2__column {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 662px;
+    height: 529px;
+    padding: 2.5%;
+    margin: 0 10px;
+  }
+
+  .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content {
+    width: 50%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-top: 5%;
+  }
+
+  .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content > .multicolumn2__column-description {
+    text-align: right;
+  }
+
+  .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content > a > button.multicolumn2__column-button {
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 0px;
+    color: black;
+    width: 179px;
+    height: 59px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.3s;
+  }
+
 }
