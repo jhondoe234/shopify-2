@@ -114,6 +114,22 @@
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .multicolumn2 {
+    display: flex;
+  }
+
+  .multicolumn2 > .multicolumn2__column {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1378px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 33%;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .multicolumn2 {
     display: flex;
