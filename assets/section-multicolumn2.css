@@ -114,7 +114,7 @@
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1440px) {
   .multicolumn2 {
     display: flex;
     justify-content: space-between;
@@ -140,8 +140,14 @@
     padding-top: 5%;
   }
 
+  .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content > img {
+    width: 100%;
+  }
+
   .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content > .multicolumn2__column-description {
     text-align: right;
+    width: 100%;
+    font-size: inherit;
   }
 
   .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content > a > button.multicolumn2__column-button {
