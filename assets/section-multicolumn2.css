@@ -4,7 +4,7 @@
   width: 100%;
   height: fit-content;
   padding: 2.5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content {
@@ -47,6 +47,71 @@
   border: 1px solid #00c8c8;
   color: white;
   cursor: pointer;
+}
+
+@media screen and (min-width: 380px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 90%;
+    margin: 5% auto;    
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 85%;
+  }
+
+  .multicolumn2 > .multicolumn2__column > .multicolumn2__column-content {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 457px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 522px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 562px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 609px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 664px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 731px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 812px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 912px) {
+  .multicolumn2 > .multicolumn2__column {
+    width: 40%;
+  }
 }
 
 @media screen and (min-width: 990px) {
