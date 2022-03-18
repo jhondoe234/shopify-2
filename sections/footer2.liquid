@@ -1,0 +1,55 @@
+{{ 'section-footer2.css' | asset_url | stylesheet_tag }}
+
+<div class="footer2">
+  <div class="footer2__big-footer">
+    <div class="big-footer__top-half">
+
+      <div class="top-half__menu">
+        <p class="top-half__menu-title">Information</p>        
+        {% for link in linklists.information.links %}
+          <a href="{{ link.url }}">
+            <p class="top-half__menu-link">{{ link.title }}</p>
+          </a>
+        {% endfor %}          
+      </div>
+
+      <div class="top-half__menu">
+        <p class="top-half__menu-title">Why Buy From Us</p>        
+        {% for link in linklists.why-buy-from-us.links %}
+          <a href="{{ link.url }}">
+            <p class="top-half__menu-link">{{ link.title }}</p>
+          </a>
+        {% endfor %}          
+      </div>
+
+      <div class="top-half__menu">
+        <p class="top-half__menu-title">Your Account</p>        
+        {% for link in linklists.your-account.links %}
+          <a href="{{ link.url }}">
+            <p class="top-half__menu-link">{{ link.title }}</p>
+          </a>
+        {% endfor %}          
+      </div>
+
+      <div class="top-half__menu">
+        <p class="top-half__menu-title">Lookbook</p>        
+        {% for link in linklists.lookbook.links %}
+          <a href="{{ link.url }}">
+            <p class="top-half__menu-link">{{ link.title }}</p>
+          </a>
+        {% endfor %}          
+      </div>
+
+      <div class="top-half__menu">
+        <p class="top-half__menu-title">Contact Details</p>
+        <p class="top-half__menu-link address">Head Office: Avenue Fashion, 180-182 Regent Street, London.</p>
+        <p class="top-half__menu-link">Telephone: 0123-456-789</p>
+        <p class="top-half__menu-link">Email: support@yourwebsite.com</p>
+      </div>
+    </div>
+
+
+    <div class="big-footer__bottom-half"></div>
+  </div>
+  <div class="footer2-small-footer"></div>
+</div>
