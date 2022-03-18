@@ -1,11 +1,12 @@
 .footer2 {
   background-color: #f8f8f8;
   padding-top: 52px;
+  margin-top: 150px;
 }
 
 .footer2 > .footer2__big-footer > .big-footer__top-half {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   padding-bottom: 50px;
   width: 60%;
@@ -33,4 +34,25 @@
 
 .address {
   width: 180px;
+}
+
+.footer2__small-footer {
+  background-color: #333333;
+  color: #999999;
+  font-size: 10px;  
+}
+
+.small-footer__content {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-footer__content > .small-footer__content-right-container {
+  display: flex;
+}
+
+.small-footer__content > .small-footer__content-right-container > .small-footer__content-design {
+  margin-right: 25px;
 }
