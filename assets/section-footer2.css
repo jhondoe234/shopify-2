@@ -239,9 +239,33 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 50px;
-    width: 60%;
+    padding-bottom: 0;
+    width: 70%;
     margin: 0 auto;
+  }
+
+  .footer2 > .footer2__big-footer > .big-footer__top-half {
+    padding-right: 50px;    
+  }
+
+  .big-footer__bottom-half {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .bottom-half__banner {
+    width: 45%;
+    margin: 0;
+    margin-right: 30px;
+  }
+  
+  .bottom-half__social-media {
+    width: 45%;
+    margin: 0;
+  }
+
+  .small-footer__content {
+    width: 65%;
   }
 
 }
