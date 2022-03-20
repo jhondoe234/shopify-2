@@ -30,91 +30,118 @@
 {%- endstyle -%}
 
 <div class="header-2">
-  <div class="header-2__top-header">
-    <div class="top-header__left-container">
-      <p class="left-container__currency-converter">Currency: GBP</p>
-    </div>
-    <div class="top-header__right-container">
-      <ul class="right-container__account-menu">
-        <li>Register</li>
-        <li>Sign In</li>
-      </ul>
-      <ul class="right-container__cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <a href="{{ routes.cart_url }}">
-          {%- if cart == empty -%}
-            {{ 'empty' }}
-          {%- else -%}
-            {{ cart.item_count }}
+  <div class="header-2__mobile-menu">
+    <div class="mobile-menu__content">
+      <div class="mobile-menu__content-hamburger-menu">
+        <button>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </button>
+      </div>
+      <div class="mobile-menu__content-logo">
+        <a href="{{ routes.root_url }}">
+          {%- if section.settings.logo != blank -%}
+            <img
+              src="{{ section.settings.logo | img_url: 'medium' }}"
+              loading="lazy"
+              width="auto"
+              height="auto"
+              alt="logo"
+            >
           {%- endif -%}
-        </a>
-        <i class="fa-light fa-angle-down fa-xs"></i>
-      </ul>
+        </a> 
+      </div>
     </div>
-  </div>
-  <div class="header-2__bottom-header">
-    <div class="bottom-header__left-container">
-      <a href="{{ routes.root_url }}">
-        {%- if section.settings.logo != blank -%}
-          <img
-            src="{{ section.settings.logo | img_url: 'medium' }}"
-            loading="lazy"
-            width="auto"
-            height="auto"
-            alt="logo"
-          >
-        {%- endif -%}
-      </a>      
-    </div>
-    
-    <div class="bottom-header__right-container">
-      <nav role="navigation">
-        <ul class="menu">
-          {%- for link in linklists.bottom-menu.links -%}
-            <li>
-              <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
-                {{ link.title }}
-              </a>
-      
-              {%- if link.links != blank -%}
-                <ul>
-                  {%- for child_link in link.links -%}
-                    <li>
-                      <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
-                        {{ child_link.title }}
-                      </a>
-      
-                      {%- if child_link.links != blank -%}
-                        <ul>
-                          {%- for grandchild_link in child_link.links -%}
-                            <li>
-                              <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
-                                {{ grandchild_link.title }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endif -%}
-      
-                    </li>
-                  {%- endfor -%}
-                </ul>
-              {%- endif -%}
-      
-            </li>
-          {%- endfor -%}
+  </div>  
+  <div class="header-2__desktop-menu">
+    <div class="header-2__top-header">
+      <div class="top-header__left-container">
+        <p class="left-container__currency-converter">Currency: GBP</p>
+      </div>
+      <div class="top-header__right-container">
+        <ul class="right-container__account-menu">
+          <li>Register</li>
+          <li>Sign In</li>
         </ul>
-      </nav>
+        <ul class="right-container__cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="{{ routes.cart_url }}">
+            {%- if cart == empty -%}
+              {{ 'empty' }}
+            {%- else -%}
+              {{ cart.item_count }}
+            {%- endif -%}
+          </a>
+          <i class="fa-light fa-angle-down fa-xs"></i>
+        </ul>
+      </div>
+    </div>
+    <div class="header-2__bottom-header">
+      <div class="bottom-header__left-container">
+        <a href="{{ routes.root_url }}">
+          {%- if section.settings.logo != blank -%}
+            <img
+              src="{{ section.settings.logo | img_url: 'medium' }}"
+              loading="lazy"
+              width="auto"
+              height="auto"
+              alt="logo"
+            >
+          {%- endif -%}
+        </a>      
+      </div>
+      
+      <div class="bottom-header__right-container">
+        <nav role="navigation">
+          <ul class="menu">
+            {%- for link in linklists.bottom-menu.links -%}
+              <li>
+                <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+                  {{ link.title }}
+                </a>
+        
+                {%- if link.links != blank -%}
+                  <ul>
+                    {%- for child_link in link.links -%}
+                      <li>
+                        <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+                          {{ child_link.title }}
+                        </a>
+        
+                        {%- if child_link.links != blank -%}
+                          <ul>
+                            {%- for grandchild_link in child_link.links -%}
+                              <li>
+                                <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+                                  {{ grandchild_link.title }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+        
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+        
+              </li>
+            {%- endfor -%}
+          </ul>
+        </nav>
 
-      <div class="form-group fg--search">
-        <input type="text" class="input" placeholder="Search..">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <div class="form-group fg--search">
+          <input type="text" class="input" placeholder="Search..">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+
       </div>
 
-    </div>
-
-
+    </div>    
   </div>
+
+
 </div>
 
 {% schema %}

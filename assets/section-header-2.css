@@ -1,4 +1,35 @@
-.header-2 {
+.header-2__mobile-menu {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-2__mobile-menu > .mobile-menu__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-2__mobile-menu > .mobile-menu__content > .mobile-menu__content-hamburger-menu > button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  margin-right: 10px;
+  background-color: transparent;
+  padding: 0;
+}
+
+.header-2__mobile-menu > .mobile-menu__content > .mobile-menu__content-hamburger-menu > button > div {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.header-2__desktop-menu {
   display: none;
 }
 
@@ -100,8 +131,11 @@
 
 /* Tablet */
 @media screen and (min-width: 990px) {
-  .header-2 {
+  .header-2__mobile-menu {
+    display: none;
+  }
+
+  .header-2__desktop-menu {
     display: initial;
-    z-index: 2;
   }
 }
