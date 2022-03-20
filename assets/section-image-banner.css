@@ -2,14 +2,16 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  top: -30px;
+  /* top: -30px; */
   width: 100%;
   z-index: 1;
 }
 
 .banner__box {
   text-align: center;
-  bottom: -25%;
+  /* bottom: -25%; */
+  position: absolute;
+  bottom: 5%;
 }
 
 @media only screen and (max-width: 749px) {
@@ -310,7 +312,7 @@
 
 .banner__box {
   padding: 4rem 3.5rem;
-  position: relative;
+  /* position: relative; */
   height: fit-content;
   align-items: center;
   text-align: center;
