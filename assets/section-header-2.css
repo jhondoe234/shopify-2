@@ -4,20 +4,20 @@
 
 .header-2__mobile-menu {
   position: absolute;
-  top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 75px;
   padding-left: 5%;
 }
 
 .header-2__mobile-menu > .mobile-menu__content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: fit-content;
-
+  height: 100%;
 }
 
 .header-2__mobile-menu > .mobile-menu__content > .mobile-menu__content-logo {
@@ -149,7 +149,15 @@
 /* Mobile */
 
 @media screen and (min-width: 375px) {
+  .header-2__mobile-menu > .mobile-menu__content {
+    width: 85%;
+  }
+}
 
+@media screen and (min-width: 425px) {
+  .header-2__mobile-menu > .mobile-menu__content {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 990px) {
