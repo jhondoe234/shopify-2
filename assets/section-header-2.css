@@ -150,17 +150,23 @@
 
 @media screen and (min-width: 375px) {
   .header-2__mobile-menu > .mobile-menu__content {
-    width: 85%;
-  }
-}
-
-@media screen and (min-width: 425px) {
-  .header-2__mobile-menu > .mobile-menu__content {
     width: 80%;
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 600px) {
+  .header-2__mobile-menu > .mobile-menu__content {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header-2__mobile-menu > .mobile-menu__content {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .header-2__mobile-menu {
     display: none;
   }
