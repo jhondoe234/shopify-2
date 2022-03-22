@@ -533,3 +533,27 @@
     min-height: 65rem;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .banner--large:not(.banner--adapt) {
+    min-height: 70rem;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .banner--large:not(.banner--adapt) {
+    min-height: 75rem;
+  }
+}
+
+@media screen and (min-width: 1270px) {
+  .banner--large:not(.banner--adapt) {
+    min-height: 80rem;
+  }
+}
+
+@media screen and (min-width: 1395px) {
+  .banner--large:not(.banner--adapt) {
+    min-height: 85rem;
+  }
+}

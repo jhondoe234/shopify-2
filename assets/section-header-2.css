@@ -167,6 +167,12 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .header-2__mobile-menu > .mobile-menu__content {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .header-2__mobile-menu {
     display: none;
   }
