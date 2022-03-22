@@ -554,7 +554,7 @@
 
 @media screen and (min-width: 1395px) {
   .banner--large:not(.banner--adapt) {
-    min-height: 85rem;
+    min-height: 90rem;
   }
 }
 
@@ -567,4 +567,16 @@
     bottom: 20%;
   }
 
+}
+
+@media screen and (min-width: 2000px) {
+  .banner--large:not(.banner--adapt) {
+    min-height: 110rem;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .banner--large:not(.banner--adapt) {
+    min-height: 130rem;
+  }
 }
