@@ -19,7 +19,7 @@
       "settings": {
         "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "bottom-right",
         "show_text_box": false,
         "stack_images_on_mobile": false,
         "show_text_below": false

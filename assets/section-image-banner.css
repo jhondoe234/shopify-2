@@ -557,3 +557,14 @@
     min-height: 85rem;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .banner__media {
+    top: -70px;
+  }
+
+  .banner__box {
+    bottom: 20%;
+  }
+
+}

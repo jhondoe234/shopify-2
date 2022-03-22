@@ -1179,6 +1179,13 @@ summary::-webkit-details-marker {
   object-fit: contain;
 }
 
+@media screen and (min-width: 1440px) {
+  .media > *:not(.zoom):not(.deferred-media__poster-button),
+  .media model-viewer {
+    object-fit: cover;
+  }
+}
+
 .media > img {
   object-fit: cover;
   object-position: center center;
