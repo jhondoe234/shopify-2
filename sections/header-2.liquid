@@ -29,11 +29,34 @@
   }
 {%- endstyle -%}
 
+<script>
+  /* Set the width of the sidebar to 250px (show it) */
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+    // document.getElementById("mySidepanel").style.padding = "30px";
+  }
+
+  /* Set the width of the sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+    // document.getElementById("mySidepanel").style.padding = "0";
+  }  
+</script>
+
+<div class="sidepanel" id="mySidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  {%- for link in linklists.bottom-menu.links -%}
+    <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+      {{ link.title }}
+    </a>
+  {%- endfor -%}
+</div>
+
 <div class="header-2">
   <div class="header-2__mobile-menu">
     <div class="mobile-menu__content">
       <div class="mobile-menu__content-hamburger-menu">
-        <button>
+        <button class="openbtn" onclick="openNav()">
           <div class="hamburger-bar"></div>
           <div class="hamburger-bar"></div>
           <div class="hamburger-bar"></div>
