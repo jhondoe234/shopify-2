@@ -1,0 +1,23 @@
+{{ 'section-multi-collections.css' | asset_url | stylesheet_tag }}
+
+<div class="multi-collections">
+  <hr>
+
+  <!-- Tab links -->
+  <div class="tabs">
+    <button class="tablinks">Popular</button>
+    <button class="tablinks">New Arrivals</button>
+    <button class="tablinks">Best Sellers</button>
+    <button class="tablinks">Special Offers</button>
+    <button class="tablinks">Coming Soon</button>
+  </div>
+
+  
+
+</div>
+
+{% schema %}
+  {
+    "name": "multi-collections"
+  }
+{% endschema %}

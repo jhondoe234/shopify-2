@@ -1,0 +1,28 @@
+.multi-collections {
+  background-color: transparent;
+  margin: 0 5%;
+}
+
+.multi-collections > hr {
+  background-color: #eeeeee;
+}
+
+.multi-collections > .tabs > button {
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #727272;
+  padding: 0 27px;
+  font-weight: 600;
+}
+
+.multi-collections > .tabs > button:first-child {
+  padding-left: 0;
+}
+
+.multi-collections > .tabs > button:hover {
+  color: #00c8c8;
+  cursor: pointer;
+}
