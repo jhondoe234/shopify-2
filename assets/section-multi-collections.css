@@ -7,7 +7,11 @@
   background-color: #eeeeee;
 }
 
-.multi-collections > .tabs > button {
+.multi-collections > .tab {
+  overflow: hidden;
+}
+
+.multi-collections > .tab > button {
   border: none;
   background: transparent;
   text-transform: uppercase;
@@ -18,11 +22,19 @@
   font-weight: 600;
 }
 
-.multi-collections > .tabs > button:first-child {
+.multi-collections > .tab > button:first-child {
   padding-left: 0;
 }
 
-.multi-collections > .tabs > button:hover {
+.multi-collections > .tab > button:hover {
   color: #00c8c8;
   cursor: pointer;
+}
+
+.multi-collections > .tab > button.active {
+  color: #00c8c8;
+}
+
+.multi-collections > .tabcontent {
+  display: none;
 }
