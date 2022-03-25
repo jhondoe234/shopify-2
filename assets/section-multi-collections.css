@@ -36,6 +36,6 @@
   color: #00c8c8;
 }
 
-.multi-collections > .tabcontent {
+.multi-collections > .tabcontent__container > .tabcontent {
   display: none;
 }
