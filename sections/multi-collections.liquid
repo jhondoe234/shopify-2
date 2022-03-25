@@ -44,7 +44,17 @@
     <h3>London</h3>
     <p>London is the capital city of England.</p>
 
+    <!-- loop over entire collection -->
+    {%- for product in collections['popular'].products limit: 6 -%}
+      <ul class="tabcontent__collection-grid">
+        
+        <!--  -->
 
+
+
+
+      </ul>
+    {%- endfor -%}
 
 
 
