@@ -1,15 +1,45 @@
 .page-title {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
-.main-page-title {
-  margin-bottom: 3rem;
+.page-width > .page-width__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
 }
 
-@media screen and (min-width: 750px) {
-  .main-page-title {
-    margin-bottom: 4rem;
-  }
+.page-width > .page-width__banner > .page-width__banner-text {
+  text-transform: uppercase;
+}
+
+.page-width > .page-width__banner > .page-width__banner-text > .main-page-title__content {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 0;
+  color: white;
+}
+
+.page-width > .page-width__banner > .page-width__banner-text > .main-page-title__content > .main-page-title__first-word {
+  font-weight: bold;
+  color: white;
+}
+
+.page-width > .page-width__banner > .page-width__banner-text > .main-page-title__content > .main-page-title {
+  color: white;
+}
+
+.page-width > .page-width__banner > .page-width__banner-text > .main-page-subtitle__content > .main-page-subtitle {
+  text-align: center;
+  color: white;
+  font-size: 27px;
+}
+
+.page-width > .page-width__banner > .page-width__banner-text > .main-page-title__content > .main-page-title__first-word {
+  margin: 0;
+  margin-right: 15px;
 }
 
 .page-placeholder-wrapper {

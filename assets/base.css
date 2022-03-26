@@ -211,9 +211,12 @@ html.no-js .no-js-hidden {
 }
 
 .page-width {
-  max-width: var(--page-width);
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+.page-width > .rte {
+  max-width: var(--page-width);  
 }
 
 .page-width-desktop {
@@ -241,8 +244,12 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 990px) {
   .page-width--narrow {
-    max-width: 72.6rem;
     padding: 0;
+  }
+
+  .page-width--narrow > .rte {
+    max-width: 72.6rem; 
+    margin: 0 auto;   
   }
 
   .page-width-desktop {
