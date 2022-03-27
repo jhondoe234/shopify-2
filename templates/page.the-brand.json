@@ -3,6 +3,8 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "banner_title_first_word": "the",
+        "banner_subtitle": "company slogan goes here",
         "padding_top": 28,
         "padding_bottom": 28
       }
