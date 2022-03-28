@@ -1,0 +1,72 @@
+.local-stores {
+  background-color: #fff;
+  margin-top: 30px;
+}
+
+.local-stores > .stores {
+  display: block;
+}
+
+.local-stores > .stores > .stores__store {
+  display: block;
+  text-align: left;
+  margin: 10px;
+  margin-top: 50px;
+  height: 245px;
+}
+
+.local-stores > .stores > .stores__store > .stores__store-city {
+  text-transform: uppercase;
+  color: #575153;
+}
+
+.local-stores > .stores > .stores__store > .stores__store-address  {
+  text-transform: uppercase;
+  color: #4c4c4c;
+  font-size: 12px;  
+}
+
+.local-stores > .stores > .stores__store > .stores__store-description {
+  color: #727171;
+  font-size: 12px;
+}
+
+.local-stores > .stores > .stores__store > .stores__store-details {
+  text-transform: uppercase;
+  background-color: white;
+  border: 1px solid #737373;
+  color: #454647;  
+  width: 175px;
+  height: 45px;
+  padding: 0;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  margin-top: 10px;
+
+}
+
+.local-stores > .stores > .stores__store > .stores__store-details:hover {
+  background-color: #00c8c8;
+  color: white;
+  border: 1px solid #00c8c8;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .local-stores > .stores > .stores__store {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .local-stores > .stores {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }  
+
+  .local-stores > .stores > .stores__store {
+    width: 80%;
+    margin-top: 0;
+  }
+}
