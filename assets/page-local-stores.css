@@ -53,6 +53,16 @@
   cursor: pointer;
 }
 
+/* Location */
+
+.local-stores > .location {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: aqua;
+  margin-top: 5%;
+}
+
 @media screen and (min-width: 768px) {
   .local-stores > .stores > .stores__store {
     width: 75%;
