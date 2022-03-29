@@ -1,7 +1,7 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "local-stores-page": {
+      "type": "local-stores-page",
       "settings": {
         "banner_title_first_word": "local",
         "banner_subtitle": "find a store near you",
@@ -11,6 +11,6 @@
     }
   },
   "order": [
-    "main"
+    "local-stores-page"
   ]
 }

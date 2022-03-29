@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<!-- Stylesheets for different pages -->
+<link rel="stylesheet" href="{{ 'page-local-stores.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <div class="page-width__banner" style="background-image: url('{{ section.settings.banner_background | img_url: 'master' }}')">
+    <div class="page-width__banner-text">
+      <div class="main-page-title__content">
+        <h1 class="main-page-title__first-word">{{ section.settings.banner_title_first_word }}</h1>
+        <h1 class="main-page-title page-title">{{ page.title | escape }}</h1>           
+      </div>
+      <div class="main-page-subtitle__content">
+        <h3 class="main-page-subtitle">{{ section.settings.banner_subtitle }}</h3>
+      </div>
+    </div>
+   
+  </div>
+
+  <div class="rte">
+    {{ page.content }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_background",
+      "label": "Banner Background"
+    },
+    {
+      "type": "text",
+      "id": "banner_title_first_word",
+      "label": "Banner Title - First Word"
+    },
+    {
+      "type": "text",
+      "id": "banner_subtitle",
+      "label": "Banner Subtitle"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}
