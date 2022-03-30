@@ -109,7 +109,7 @@
   margin-right: 10px;
 }
 
-.local-stores > .stores > .stores__store >  .button_container > .view_button {
+.local-stores > .stores > .stores__store > .view__button {
   text-transform: uppercase;
   background-color: white;
   border: 1px solid #737373;
@@ -124,7 +124,7 @@
 
 }
 
-.local-stores > .stores > .stores__store > .button_container > .view_button:hover {
+.local-stores > .stores > .stores__store > .view__button:hover {
   background-color: #00c8c8;
   color: white;
   border: 1px solid #00c8c8;
