@@ -20,10 +20,13 @@
 
     location__content = document.getElementsByClassName("location__content");
 
-     for(i = 0; i < location__content.length; i++){
-       if(location__content[i].id == cityName){
-         console.log(location__content[i]);
-         location__content[i].style.display == "flex";
+    for(i = 0; i < location__content.length; i++){
+      if(location__content[i].id == cityName){
+        console.log('cityName', cityName);
+        console.log(location__content[i]);
+        location__content[i].style.display = "flex";
+      } else {
+        location__content[i].style.display = "none";
       }
     }  
 
@@ -54,21 +57,21 @@
           <h3 class="stores__store-city">London</h3>
           <p class="stores__store-address">180-182 Regent Street, London, W1B 5BT</p>
           <p class="stores__store-description">Lorem ipsum dolor sit amet, consectetur adipiscing esielit. Vivamus at arcu sem. Vestibulum omare eleifendit massa, nec tempor odio. Fusce posuere nunc iaculs ligula viverra iaculis. Aliquam erat volutpat.</p>
-          <button class="view__button" onclick="view_details(event,"London")>View Details</button>
+          <button class="view__button" onclick="view_details(event,'London')">View Details</button>
         </div>
 
         <div class="stores__store">
           <h3 class="stores__store-city">New York</h3>
           <p class="stores__store-address">109 Columbus Circle, New York, NY 10023</p>
           <p class="stores__store-description">Nunc non posuere nisl. Etiam finibus vel dui nec lobortis. Aliquam egestas, sem quis condimentum venenatis, erat leo fermentum dolor, non sollicitudin massa mieu nibh. Nullam vitae aliquam dui, non sodales nisl.</p>
-          <button class="view__button" onclick="view_details(event,"New_York")>View Details</button>
+          <button class="view__button" onclick="view_details(event,'New_York')">View Details</button>
         </div>
 
         <div class="stores__store">
           <h3 class="stores__store-city">Paris</h3>
           <p class="stores__store-address">2133 Rue Saint-honore, 75001 Paris</p>
           <p class="stores__store-description">Ut interdum fermentum blandit. Donec nec lacus egetit mi rhoncus eleifend. Curabitur laoreet nisl eget rutruml auctor. Vestibulum ante ipsum primis in faucibus orcip luctus et ultrices posuere cubilia curae cras ligula.</p>
-          <button class="view__button" onclick="view_details(event,"Paris")>View Details</button>
+          <button class="view__button" onclick="view_details(event,'Paris')">View Details</button>
         </div>
       </div>
 
