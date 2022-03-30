@@ -74,6 +74,7 @@
 .local-stores > .stores {
   display: block;
   padding: 5%;
+  padding-bottom: 20%;
 }
 
 .local-stores > .stores > .stores__store {
@@ -183,6 +184,11 @@
 @media screen and (min-width: 768px) {
   .local-stores {
     margin-top: 30px;
+  }
+
+  .local-stores > .stores {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .local-stores > .stores > .stores__store {
