@@ -1,7 +1,7 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "brand-page": {
+      "type": "brand-page",
       "settings": {
         "banner_title_first_word": "the",
         "banner_subtitle": "company slogan goes here",
@@ -11,6 +11,6 @@
     }
   },
   "order": [
-    "main"
+    "brand-page"
   ]
 }
