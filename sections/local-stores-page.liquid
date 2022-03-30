@@ -24,7 +24,13 @@
       if(location__content[i].id == cityName){
         console.log('cityName', cityName);
         console.log(location__content[i]);
-        location__content[i].style.display = "flex";
+
+        if(window.innerWidth < 768){
+          location__content[i].style.display = "block";
+        } else {
+          location__content[i].style.display = "flex";
+        }
+
       } else {
         location__content[i].style.display = "none";
       }
@@ -115,7 +121,7 @@
             <p class="stores__store-address">109 Columbus Circle, New York, NY 10023</p>
             <p class="stores__store-description">Nunc non posuere nisl. Etiam finibus vel dui nec lobortis. Aliquam egestas, sem quis condimentum venenatis, erat leo fermentum dolor, non sollicitudin massa mieu nibh. Nullam vitae aliquam dui, non sodales nisl.</p>
             <h3 class="stores__store-bullet-point">
-            <span><i class="fa-solid fa-location-dot"></i></span> 180-182 Regent Street, London, W1B 5BT</h3>
+            <span><i class="fa-solid fa-location-dot"></i></span>109 Columbus Circle, New York, NY 10023</h3>
             <h3 class="stores__store-bullet-point">
             <span><i class="fa-solid fa-phone"></i></span> 0123-456-789</h3>
             <h3 class="stores__store-bullet-point">
@@ -144,7 +150,7 @@
             <p class="stores__store-address">2133 Rue Saint-honore, 75001 Paris</p>
             <p class="stores__store-description">Ut interdum fermentum blandit. Donec nec lacus egetit mi rhoncus eleifend. Curabitur laoreet nisl eget rutruml auctor. Vestibulum ante ipsum primis in faucibus orcip luctus et ultrices posuere cubilia curae cras ligula.</p>
             <h3 class="stores__store-bullet-point">
-            <span><i class="fa-solid fa-location-dot"></i></span> 180-182 Regent Street, London, W1B 5BT</h3>
+            <span><i class="fa-solid fa-location-dot"></i></span>2133 Rue Saint-honore, 75001 Paris</h3>
             <h3 class="stores__store-bullet-point">
             <span><i class="fa-solid fa-phone"></i></span> 0123-456-789</h3>
             <h3 class="stores__store-bullet-point">
