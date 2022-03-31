@@ -100,7 +100,8 @@
 .brand-page > .brand-page__content-mobile > #item_7 {
   display: flex;
   justify-content: space-around;
-  align-items: center;  
+  align-items: center;
+  padding: 0 5%;
 }
 
 .brand-page > .brand-page__content-mobile > #item_7 > img {
