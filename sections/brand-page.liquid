@@ -32,42 +32,74 @@
 
   <div class="brand-page">
     <div class="brand-page__content-mobile">
-      <div class="content-mobile__item" id="item_1">
+      <div class="content-mobile__item" id="item_1_mobile">
         <img src="{{ section.settings.item_1_image | img_url: 'medium' }}" alt="item_1_img" loading="lazy">
       </div>
-      <div class="content-mobile__item content-text__container" id="item_2">
+      <div class="content-mobile__item content-text__container" id="item_2_mobile">
         <h4 class="content-text__container-title">{{ section.settings.item_2_title }}</h4>
         <h5 class="content-text__container-subtitle">{{ section.settings.item_2_subtitle }}</h5>
         <p class="content-text__container-description">{{ section.settings.item_2_description }}</p>
       </div>
-      <div class="content-mobile__item" id="item_3">
+      <div class="content-mobile__item" id="item_3_mobile">
         <img src="{{ section.settings.item_3_image | img_url: 'medium' }}" alt="item_3_img" loading="lazy">        
       </div>
-      <div class="content-mobile__item content-text__container" id="item_4">
+      <div class="content-mobile__item content-text__container" id="item_4_mobile">
         <h4 class="content-text__container-title">{{ section.settings.item_4_title }}</h4>
         <h5 class="content-text__container-subtitle">{{ section.settings.item_4_subtitle }}</h5>
         <p class="content-text__container-description">{{ section.settings.item_4_description }}</p>
       </div>
-      <div class="content-mobile__item" id="item_5">
+      <div class="content-mobile__item" id="item_5_mobile">
         <img src="{{ section.settings.item_5_image | img_url: 'medium' }}" alt="item_5_img" loading="lazy">  
       </div>
-      <div class="content-mobile__item content-text__container" id="item_6">
+      <div class="content-mobile__item content-text__container" id="item_6_mobile">
         <h4 class="content-text__container-title">{{ section.settings.item_6_title }}</h4>
         <h5 class="content-text__container-subtitle">{{ section.settings.item_6_subtitle }}</h5>
         <p class="content-text__container-description">{{ section.settings.item_6_description }}</p>
       </div>
-      <div class="content-mobile__item" id="item_7">
+      <div class="content-mobile__item" id="item_7_mobile">
         <img src="{{ section.settings.item_7_logo_1 | img_url: 'medium' }}" alt="item_7_logo_1" loading="lazy"> 
         <img src="{{ section.settings.item_7_logo_2 | img_url: 'medium' }}" alt="item_7_logo_2" loading="lazy"> 
         <img src="{{ section.settings.item_7_logo_3 | img_url: 'medium' }}" alt="item_7_logo_3" loading="lazy"> 
       </div>
     </div>
 
+    <div class="brand-page__content-desktop">
+      <div class="column left">
+        <div class="content-desktop__item" id="item_1_desktop">
+          <img src="{{ section.settings.item_1_image | img_url: 'medium' }}" alt="item_1_img" loading="lazy">
+        </div>
+        <div class="content-desktop__item" id="item_3_desktop">
+          <img src="{{ section.settings.item_3_image | img_url: 'medium' }}" alt="item_3_img" loading="lazy"> 
+        </div>
+        <div class="content-desktop__item content-text__container" id="item_4_desktop">
+          <h4 class="content-text__container-title">{{ section.settings.item_4_title }}</h4>
+          <h5 class="content-text__container-subtitle">{{ section.settings.item_4_subtitle }}</h5>
+          <p class="content-text__container-description">{{ section.settings.item_4_description }}</p>
+        </div>
+      </div>
 
+      <div class="column right">
+        <div class="content-desktop__item content-text__container" id="item_2_desktop">
+          <h4 class="content-text__container-title">{{ section.settings.item_2_title }}</h4>
+          <h5 class="content-text__container-subtitle">{{ section.settings.item_2_subtitle }}</h5>
+          <p class="content-text__container-description">{{ section.settings.item_2_description }}</p>
+        </div>
+        <div class="content-desktop__item" id="item_5_desktop">
+          <img src="{{ section.settings.item_5_image | img_url: 'medium' }}" alt="item_5_img" loading="lazy">
+        </div>
+        <div class="content-desktop__item content-text__container" id="item_6_desktop">
+          <h4 class="content-text__container-title">{{ section.settings.item_6_title }}</h4>
+          <h5 class="content-text__container-subtitle">{{ section.settings.item_6_subtitle }}</h5>
+          <p class="content-text__container-description">{{ section.settings.item_6_description }}</p>
+        </div>
+        <div class="content-desktop__item" id="item_7_desktop">
+          <img src="{{ section.settings.item_7_logo_1 | img_url: 'medium' }}" alt="item_7_logo_1" loading="lazy"> 
+          <img src="{{ section.settings.item_7_logo_2 | img_url: 'medium' }}" alt="item_7_logo_2" loading="lazy"> 
+          <img src="{{ section.settings.item_7_logo_3 | img_url: 'medium' }}" alt="item_7_logo_3" loading="lazy"> 
+        </div>
+      </div>
+    </div>
 
-
-
-    <div class="brand-page__content-desktop"></div>
   </div>
 </div>
 
