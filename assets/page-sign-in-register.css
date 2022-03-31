@@ -96,6 +96,14 @@
   color: #989898;
 }
 
+.sign-in-register-page__content > .column > form > input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #bb5465;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #fcf6f7;
+}
+
 .sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot > input[type="button"] {
   border: none;
   border: 1px solid #737373;
@@ -105,9 +113,20 @@
   transition: 0.3s;
 }
 
+.sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot > input[type="button"]:hover {
+  cursor: pointer;
+  background-color: #00c8c8;
+  border: 1px solid #00c8c8;
+  color: white;
+}
+
 .sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot {
   display: flex;
   justify-content: space-between;  
+}
+
+.sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot:hover {
+  cursor: pointer;
 }
 
 .sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot > .button-forgot {
@@ -116,9 +135,3 @@
 
 
 
-.sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot > input[type="button"]:hover {
-  cursor: pointer;
-  background-color: #00c8c8;
-  border: 1px solid #00c8c8;
-  color: white;
-}
