@@ -1,7 +1,7 @@
 {
   "sections": {
-    "sign-in-page": {
-      "type": "sign-in-page",
+    "sign-in-register-page": {
+      "type": "sign-in-register-page",
       "settings": {
         "banner_title_first_word": "welcome",
         "banner_title_rest": "to ave",
@@ -12,6 +12,6 @@
     }
   },
   "order": [
-    "sign-in-page"
+    "sign-in-register-page"
   ]
 }
