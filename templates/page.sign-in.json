@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "sign-in-page": {
+      "type": "sign-in-page",
+      "settings": {
+        "banner_title_first_word": "welcome",
+        "banner_title_rest": "to ave",
+        "banner_subtitle": "sign in or register",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "sign-in-page"
+  ]
+}
