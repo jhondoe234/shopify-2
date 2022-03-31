@@ -57,3 +57,68 @@
 
 
 /* ============================================= */
+
+.sign-in-register-page__content {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.sign-in-register-page__content > .column {
+  display: block;
+  width: 50%;
+  padding: 2%;
+}
+
+.sign-in-register-page__content > .column > .column__title {
+  text-transform: uppercase;
+  color: #575153;
+}
+
+
+
+.sign-in-register-page__content > .sign-in {
+  border-right: 1px solid #eeeeee;
+}
+
+.sign-in-register-page__content > .column > form > input {
+  display: block;
+  width: 100%;
+  margin: 25px 0;
+  border: none;
+  border: 1px solid #eeeeee;
+  padding: 7px 10px;
+}
+
+.sign-in-register-page__content > .column > form > input::placeholder {
+  color: #989898;
+}
+
+.sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot > input[type="button"] {
+  border: none;
+  border: 1px solid #737373;
+  background-color: transparent;
+  padding: 15px 35px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot > .button-forgot {
+  color: #00c8c8;
+}
+
+
+
+.sign-in-register-page__content > .sign-in > form > .sign-in__button-forgot > input[type="button"]:hover {
+  cursor: pointer;
+  background-color: #00c8c8;
+  border: 1px solid #00c8c8;
+  color: white;
+}
