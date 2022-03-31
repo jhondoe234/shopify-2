@@ -17,7 +17,7 @@
   }
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="brand-page section-{{ section.id }}-padding">
   <div class="page-width__banner" style="background-image: url('{{ section.settings.banner_background | img_url: 'master' }}')">
     <div class="page-width__banner-text">
       <div class="main-page-title__content">
@@ -28,11 +28,46 @@
         <h3 class="main-page-subtitle">{{ section.settings.banner_subtitle }}</h3>
       </div>
     </div>
-   
   </div>
 
   <div class="brand-page">
-    this is the brand page
+    <div class="brand-page__content-mobile">
+      <div class="content-mobile__item" id="item_1">
+        <img src="{{ section.settings.item_1_image | img_url: 'medium' }}" alt="item_1_img" loading="lazy">
+      </div>
+      <div class="content-mobile__item content-text__container" id="item_2">
+        <h4 class="content-text__container-title">{{ section.settings.item_2_title }}</h4>
+        <h5 class="content-text__container-subtitle">{{ section.settings.item_2_subtitle }}</h5>
+        <p class="content-text__container-description">{{ section.settings.item_2_description }}</p>
+      </div>
+      <div class="content-mobile__item" id="item_3">
+        <img src="{{ section.settings.item_3_image | img_url: 'medium' }}" alt="item_3_img" loading="lazy">        
+      </div>
+      <div class="content-mobile__item content-text__container" id="item_4">
+        <h4 class="content-text__container-title">{{ section.settings.item_4_title }}</h4>
+        <h5 class="content-text__container-subtitle">{{ section.settings.item_4_subtitle }}</h5>
+        <p class="content-text__container-description">{{ section.settings.item_4_description }}</p>
+      </div>
+      <div class="content-mobile__item" id="item_5">
+        <img src="{{ section.settings.item_5_image | img_url: 'medium' }}" alt="item_5_img" loading="lazy">  
+      </div>
+      <div class="content-mobile__item content-text__container" id="item_6">
+        <h4 class="content-text__container-title">{{ section.settings.item_6_title }}</h4>
+        <h5 class="content-text__container-subtitle">{{ section.settings.item_6_subtitle }}</h5>
+        <p class="content-text__container-description">{{ section.settings.item_6_description }}</p>
+      </div>
+      <div class="content-mobile__item" id="item_7">
+        <img src="{{ section.settings.item_7_logo_1 | img_url: 'medium' }}" alt="item_7_logo_1" loading="lazy"> 
+        <img src="{{ section.settings.item_7_logo_2 | img_url: 'medium' }}" alt="item_7_logo_2" loading="lazy"> 
+        <img src="{{ section.settings.item_7_logo_3 | img_url: 'medium' }}" alt="item_7_logo_3" loading="lazy"> 
+      </div>
+    </div>
+
+
+
+
+
+    <div class="brand-page__content-desktop"></div>
   </div>
 </div>
 
@@ -62,24 +97,79 @@
       "label": "Banner Subtitle"
     },
     {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "type": "image_picker",
+      "id": "item_1_image",
+      "label": "Item 1 Image"
     },
     {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "type": "text",
+      "id": "item_2_title",
+      "label": "Item 2 Title"
+    },
+    {
+      "type": "text",
+      "id": "item_2_subtitle",
+      "label": "Item 2 Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "item_2_description",
+      "label": "Item 2 Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_3_image",
+      "label": "Item 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "item_4_title",
+      "label": "Item 4 Title"
+    },
+    {
+      "type": "text",
+      "id": "item_4_subtitle",
+      "label": "Item 4 Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "item_4_description",
+      "label": "Item 4 Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_5_image",
+      "label": "Item 5 Image"
+    },
+    {
+      "type": "text",
+      "id": "item_6_title",
+      "label": "Item 6 Title"
+    },
+    {
+      "type": "text",
+      "id": "item_6_subtitle",
+      "label": "Item 6 Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "item_6_description",
+      "label": "Item 6 Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_7_logo_1",
+      "label": "Item 7 Logo 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_7_logo_2",
+      "label": "Item 7 Logo 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_7_logo_3",
+      "label": "Item 7 Logo 3"
     }
   ]
 }
