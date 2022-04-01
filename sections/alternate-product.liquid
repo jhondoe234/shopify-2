@@ -1,11 +1,7 @@
-<link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <!-- Stylesheets for different pages -->
-<link rel="stylesheet" href="{{ 'page-local-stores.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<link rel="stylesheet" href="{{ 'section-alternate-product.css' | asset_url }}" media="print" onload="this.media='all'">
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -21,27 +17,23 @@
   }
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="alternate-product section-{{ section.id }}-padding">
   <div class="page-width__banner" style="background-image: url('{{ section.settings.banner_background | img_url: 'master' }}')">
     <div class="page-width__banner-text">
       <div class="main-page-title__content">
         <h1 class="main-page-title__first-word">{{ section.settings.banner_title_first_word }}</h1>
-        <h1 class="main-page-title page-title">{{ page.title | escape }}</h1>           
+        <h1 class="main-page-title page-title">{{ section.settings.banner_title_rest }}</h1>           
       </div>
       <div class="main-page-subtitle__content">
         <h3 class="main-page-subtitle">{{ section.settings.banner_subtitle }}</h3>
       </div>
     </div>
   </div>
-
-  <div class="rte">
-    {{ page.content }}
-  </div>
 </div>
 
 {% schema %}
 {
-  "name": "t:sections.main-page.name",
+  "name": "Alternate Product",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -58,6 +50,11 @@
       "type": "text",
       "id": "banner_title_first_word",
       "label": "Banner Title - First Word"
+    },
+    {
+      "type": "text",
+      "id": "banner_title_rest",
+      "label": "Banner Title - Rest of the Title"
     },
     {
       "type": "text",

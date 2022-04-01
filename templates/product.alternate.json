@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "alternate-product": {
+      "type": "alternate-product",
+      "settings": {
+        "banner_title_first_word": "product",
+        "banner_title_rest": "view",
+        "banner_subtitle": "find a store near you",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "alternate-product"
+  ]
+}
