@@ -59,16 +59,16 @@
 /* ============================================= */
 
 .sign-in-register-page__content {
-  display: flex;
-  justify-content: center;
-  width: 65%;
-  margin: 0 auto;
+  display: block;
+  width: 100%;
   margin-top: 2.5%;
 }
 
 .sign-in-register-page__content > .column {
   display: block;
-  width: 50%;
+  width: 90%;
+  padding: 10% 0;
+  margin: 0 auto;
 }
 
 .sign-in-register-page__content > .column > .column__title {
@@ -77,12 +77,14 @@
 }
 
 .sign-in-register-page__content > .sign-in {
-  border-right: 1px solid #eeeeee;
-  padding-right: 3%;
+  border-right: none;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .sign-in-register-page__content > .register {
-  padding-left: 3%;
+  padding-left: 0;
+  padding-bottom: 0;
 }
 
 .sign-in-register-page__content > .column > form > input {
@@ -172,9 +174,6 @@
 }
 
 .sign-in-register-page__content > .register > form > .register__create-account-policy {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 15px;
 }
 
@@ -196,12 +195,76 @@
 
 .sign-in-register-page__content > .register > form > .register__create-account-policy > .policy {
   font-size: 12px;
-  margin: 0;
+  margin: 10% 0;
   width: 200px;
-  text-align: end;
+  text-align: center;
 }
 
 .sign-in-register-page__content > .register > form > .register__create-account-policy > .policy > span {
   color: #00c8c8;
   font-size: 12px;
+}
+
+@media screen and (min-width: 425px) {
+  .sign-in-register-page__content {
+    width: 100%;
+  }
+
+  .sign-in-register-page__content > .column {
+    display: block;
+    width: 80%;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+  .sign-in-register-page__content {
+    width: 100%;
+  }
+
+  .sign-in-register-page__content > .column {
+    display: block;
+    width: 60%;
+  }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  .sign-in-register-page__content {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2.5%;
+  }
+
+  .sign-in-register-page__content > .column {
+    display: block;
+    width: 50%;
+  }
+
+  .sign-in-register-page__content > .sign-in {
+    border-right: 1px solid #eeeeee;
+    padding-right: 3%;
+  }
+
+  .sign-in-register-page__content > .register {
+    padding-left: 3%;
+  }
+
+  .sign-in-register-page__content > .register > form > .register__create-account-policy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .sign-in-register-page__content > .register > form > .register__create-account-policy > .policy {
+    font-size: 12px;
+    margin: 0;
+    width: 200px;
+    text-align: end;
+  }
+
 }
