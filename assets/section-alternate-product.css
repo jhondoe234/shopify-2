@@ -104,6 +104,15 @@
   margin: 0 15px;
 }
 
+.review-social__social > ul > li > .svg-inline--fa {
+  transition: 0.3s;
+}
+
+.review-social__social > ul > li > .svg-inline--fa:hover {
+  cursor: pointer;
+  color: #00c8c8;
+}
+
 .review-social__social > ul > li:first-child {
   margin-right: 0 !important;
 }
