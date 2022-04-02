@@ -32,11 +32,14 @@
 
   <div class="alternate-product__product">
     <div class="alternate-product__product-top-half">
-      <div class="product-top-half__product-image">[Image]</div>
+      <div class="product-top-half__product-image">
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">
+      </div>
       <div class="product-top-half__product-info">
 
         <div class="product-info__heading">
           <h3 class="product-info__heading-title">{{ product.title }}</h3>
+
           <div class="product-info__heading-review-social">
             <div class="review-social__review">
               <div class="review-social__review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
@@ -56,11 +59,38 @@
             </div>
           </div>
 
-
-
-
+          <div class="product-info__heading-price">
+            <div class="price-original">{{ product.compare_at_price | money }}</div>
+            <div class="price-new">{{ product.price | money }}</div>
+          </div>
         </div>
 
+        <div class="product-info__avail-code-tags">
+          <div class="avail-code-tags__availability">
+            <h4>availability:</h4>
+            <p>{% if product.available %}In stock{% else %}Out of stock{% endif %}</p>
+          </div>
+
+          <div class="avail-code-tags__code">
+            <h4>product code:</h4>
+            <p>
+              {% for variant in product.variants %}
+                {{ variant.barcode }}
+              {% endfor %}
+            </p>
+          </div>
+
+          <div class="avail-code-tags__tags">
+            <h4>tags:</h4>
+            {% if product.tags.size > 0 %}
+              <p>{{ product.tags | join: ", " }}</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="product-info__description">
+          <p>{{ product.description }}</p>
+        </div>
 
       </div>
     </div>
