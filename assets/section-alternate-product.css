@@ -61,6 +61,7 @@
 .alternate-product__product {
   display: flex;
   justify-content: center;
+  margin-top: 2.5%;
 }
 
 .alternate-product__product-top-half {
@@ -107,7 +108,15 @@
   margin-right: 0 !important;
 }
 
+.review-social__review-add-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+}
+
 .review-social__review-add-review > span {
+  display: flex;
   margin: 0 10px;
 }
 
@@ -117,4 +126,13 @@
 
 .review-social__review-add-review > span:last-child {
   margin-right: 0 !important;
+}
+
+.review-social__review-add-review > p {
+  transition: 0.3s;
+}
+
+.review-social__review-add-review > p:hover {
+  cursor: pointer;
+  color: #00c8c8;
 }
