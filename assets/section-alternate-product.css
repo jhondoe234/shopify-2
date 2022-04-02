@@ -57,3 +57,64 @@
 
 
 /* ============================================= */
+
+.alternate-product__product {
+  display: flex;
+  justify-content: center;
+}
+
+.alternate-product__product-top-half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-top-half__product-info {
+  margin-left: 30px;
+}
+
+.product-info__heading-review-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+.review-social__review {
+  display: flex;
+}
+
+.review-social__review-stars {
+  margin-left: 0 !important;
+}
+
+.review-social__review > * {
+  margin: 0 10px;
+}
+
+.review-social__social > ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.review-social__social > ul > li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.review-social__social > ul > li:first-child {
+  margin-right: 0 !important;
+}
+
+.review-social__review-add-review > span {
+  margin: 0 10px;
+}
+
+.review-social__review-add-review > span:first-child {
+  margin-left: 0 !important;
+}
+
+.review-social__review-add-review > span:last-child {
+  margin-right: 0 !important;
+}
