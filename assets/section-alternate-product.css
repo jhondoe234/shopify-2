@@ -323,6 +323,10 @@
   margin-bottom: 20px;
 }
 
+.product-info__add-buttons > .add-buttons__buttons > .add-to-cart > .svg-inline--fa {
+  margin-right: 5px;
+}
+
 .product-info__add-buttons > .add-buttons__buttons > .add-to-cart, .add-to-lookbook {
   margin-right: 20px;
   padding: 15px 25px;
