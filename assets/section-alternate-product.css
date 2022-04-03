@@ -397,6 +397,10 @@
   display: block;
 }
 
+#Paris > .tabcontent__tab > #tab__video > #tab__description > h4 {
+  display: none;
+}
+
 .product-info__description > #tab__size_specs {
   display: none;
 }
@@ -405,6 +409,51 @@
   display: block;
 }
 
+.product-info__description > #tab__delivery {
+  display: none;
+}
+
+#Delivery > .tabcontent__tab > #tab__delivery {
+  display: block;
+}
+
+.product-info__description > #tab__reviews {
+  display: none;
+}
+
+#Reviews > .tabcontent__tab > #tab__reviews {
+  display: block;
+}
+
+.product-bottom-half__extra-descriptions > .tabcontent {
+  border: none !important;
+}
+
 .tabcontent__tab >  p, ul {
   display: none;
+}
+
+.tabcontent__tab > div > h4 {
+  text-transform: uppercase;
+}
+
+.product-bottom-half__extra-descriptions > .tab {
+  background-color: #f8f8f8;  
+  border: none;
+  width: 100%;
+}
+
+.product-bottom-half__extra-descriptions > .tab > button {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 60px;  
+}
+
+.product-bottom-half__extra-descriptions > .tab > button:first-child {
+  padding: 15px 20px;
+}
+
+.product-bottom-half__extra-descriptions > .tab > button.active {
+  background-color: #333333;
+  color: white;
 }

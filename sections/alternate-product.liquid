@@ -210,6 +210,8 @@
           <button class="tablinks" onclick="openCity(event, 'London')">Description</button>
           <button class="tablinks" onclick="openCity(event, 'Paris')">Video</button>
           <button class="tablinks" onclick="openCity(event, 'Tokyo')">Size & Specs</button>
+          <button class="tablinks" onclick="openCity(event, 'Delivery')">Delivery & Returns</button>
+          <button class="tablinks" onclick="openCity(event, 'Reviews')">Reviews</button>
         </div>
 
         <!-- Tab content -->
@@ -222,6 +224,14 @@
         </div>
 
         <div id="Tokyo" class="tabcontent">
+          <div class="tabcontent__tab">{{ product.description }}</div>
+        </div>
+
+        <div id="Delivery" class="tabcontent">
+          <div class="tabcontent__tab">{{ product.description }}</div>
+        </div>
+        
+        <div id="Reviews" class="tabcontent">
           <div class="tabcontent__tab">{{ product.description }}</div>
         </div>
 
