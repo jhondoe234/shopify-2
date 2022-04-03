@@ -59,8 +59,6 @@
 /* ============================================= */
 
 .alternate-product__product {
-  display: flex;
-  justify-content: center;
   margin: 0 auto;
   margin-top: 5%;
   width: 65%;
@@ -256,6 +254,10 @@
   padding-right: 50px;
 }
 
+.product-info__description > .tab__description {
+  display: none;
+}
+
 .product-info__description > ul {
   padding-left: 10px;
 }
@@ -373,4 +375,36 @@
   background-color: #727272;
   color: white;
   border-radius: 50%;
+}
+
+.alternate-product__product-bottom-half {
+  margin-top: 30px;
+}
+
+.product-info__description > #tab__description {
+  display: none;
+}
+
+#London > .tabcontent__tab > #tab__description {
+  display: block;
+}
+
+.product-info__description > #tab__video {
+  display: none;
+}
+
+#Paris > .tabcontent__tab > #tab__video {
+  display: block;
+}
+
+.product-info__description > #tab__size_specs {
+  display: none;
+}
+
+#Tokyo > .tabcontent__tab > #tab__size_specs {
+  display: block;
+}
+
+.tabcontent__tab >  p, ul {
+  display: none;
 }
