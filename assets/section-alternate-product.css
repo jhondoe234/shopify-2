@@ -508,12 +508,13 @@
   .alternate-product__product {
     margin: 0 auto;
     margin-top: 5%;
-    width: 65%;
+    width: 75%;
   }
   
   .product-top-half__product-image {
     width: 50%;
     height: 100%;
+    margin-top: 5%;
   }
   
   .product-top-half__product-image > img {
@@ -540,7 +541,7 @@
   }
 
   .review-social__review {
-    display: flex;
+    display: block;
   }
 
   .product-info__description > p {
@@ -564,6 +565,56 @@
     font-size: x-large;
     color: #8c8c8c;
   }
+
+  .product-info__heading-review-social {
+    display: block;
+  }
+
+  .product-bottom-half__extra-descriptions > .tab {
+    flex-direction: row;
+  }
+
+  .product-bottom-half__extra-descriptions > .tab > button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 30px;  
+  }
+  
+  .product-bottom-half__extra-descriptions > .tab > button:first-child {
+    padding: 15px;
+  }
+
+
+
+
+
+ 
+  #London > .tabcontent__tab > #tab__description {
+    display: block;
+    padding: 0;
+  }
+    
+  #Paris > .tabcontent__tab > #tab__video {
+    display: block;
+    padding: 0;
+  }
+      
+  #Tokyo > .tabcontent__tab > #tab__size_specs {
+    display: block;
+    padding: 0;
+  }
+    
+  #Delivery > .tabcontent__tab > #tab__delivery {
+    display: block;
+    padding: 0;
+  }
+  
+  #Reviews > .tabcontent__tab > #tab__reviews {
+    display: block;
+    padding: 0;
+  }
+
+
 
 
 
