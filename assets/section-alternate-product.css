@@ -61,11 +61,11 @@
 .alternate-product__product {
   margin: 0 auto;
   margin-top: 5%;
-  width: 65%;
+  width: 100%;
 }
 
 .product-top-half__product-image {
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
 
@@ -76,33 +76,33 @@
 }
 
 .product-top-half__product-info {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .alternate-product__product-top-half {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: block;
 }
 
 .product-info__heading-title {
-  margin-top: 0;
+  margin-top: 10%;
   text-transform: uppercase;
 }
 
 .product-top-half__product-info {
-  margin-left: 30px;
+  margin-left: 0;
 }
 
 .product-info__heading-review-social {
-  display: flex;
-  justify-content: left;
-  align-items: center;
+  display: block;
   height: fit-content;
 }
 
 .review-social__review {
-  display: flex;
+  display: block;
 }
 
 .review-social__review-stars {
@@ -123,6 +123,12 @@
 
 .review-social__social {
   font-size: 14px;
+}
+
+.review-social__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
 }
 
 .review-social__social > ul {
@@ -152,11 +158,12 @@
 
 .review-social__review-add-review {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   height: 28px;
   font-size: 14px;
-  width: max-content;
+  margin: 5% 0;
+  width: 100%;
 }
 
 .review-social__review-add-review > span {
@@ -184,7 +191,7 @@
 .product-info__heading-price {
   display: flex;
   width: fit-content;
-  margin-top: 5px;
+  margin-top: 25px;
   margin-bottom: 30px;
   font-size: x-large;
   color: #8c8c8c;
@@ -251,7 +258,7 @@
 }
 
 .product-info__description > p {
-  padding-right: 50px;
+  padding: 0 10%;
 }
 
 .product-info__description > .tab__description {
@@ -318,6 +325,15 @@
 
 .product-info__add-buttons {
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-info__add-buttons > .add-buttons__buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 .product-info__add-buttons > .add-buttons__buttons > .add-to-cart {
@@ -387,6 +403,7 @@
 
 #London > .tabcontent__tab > #tab__description {
   display: block;
+  padding: 0 10%;
 }
 
 .product-info__description > #tab__video {
@@ -395,6 +412,7 @@
 
 #Paris > .tabcontent__tab > #tab__video {
   display: block;
+  padding: 0 10%;
 }
 
 #Paris > .tabcontent__tab > #tab__video > #tab__description > h4 {
@@ -407,6 +425,7 @@
 
 #Tokyo > .tabcontent__tab > #tab__size_specs {
   display: block;
+  padding: 0 10%;
 }
 
 .product-info__description > #tab__delivery {
@@ -415,6 +434,7 @@
 
 #Delivery > .tabcontent__tab > #tab__delivery {
   display: block;
+  padding: 0 10%;
 }
 
 .product-info__description > #tab__reviews {
@@ -423,6 +443,7 @@
 
 #Reviews > .tabcontent__tab > #tab__reviews {
   display: block;
+  padding: 0 10%;
 }
 
 .product-bottom-half__extra-descriptions > .tabcontent {
@@ -441,6 +462,8 @@
   background-color: #f8f8f8;  
   border: none;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-bottom-half__extra-descriptions > .tab > button {
@@ -456,4 +479,69 @@
 .product-bottom-half__extra-descriptions > .tab > button.active {
   background-color: #333333;
   color: white;
+}
+
+@media screen (min-width: 1024px) {
+  .alternate-product__product {
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 65%;
+  }
+  
+  .product-top-half__product-image {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .product-top-half__product-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-top-half__product-info {
+    width: 50%;
+  }
+  
+  .alternate-product__product-top-half {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .product-info__heading-review-social {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .review-social__review {
+    display: flex;
+  }
+
+  .product-info__description > p {
+    padding-right: 50px;
+  }
+
+  .review-social__review-add-review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    font-size: 14px;
+    width: max-content;
+  }
+
+  .product-info__heading-price {
+    display: flex;
+    width: fit-content;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: x-large;
+    color: #8c8c8c;
+  }
+
+
+
 }
