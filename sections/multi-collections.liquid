@@ -45,7 +45,15 @@
       <div class="tabcontent__column-1">
         {% for product in collections['popular'].products limit: 3 %}
           <div class="column-1__product">
-            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">            
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">
+            <div class="column-1__product-price">
+              {% if product.compare_at_price %}
+                <div class="price-original">{{ product.compare_at_price | money }}</div>
+                <div class="price-new">{{ product.price | money }}</div>
+              {% else%}
+                <div class="price-new">{{ product.price | money }}</div>
+              {% endif %}
+            </div>       
           </div>
         {% endfor %}        
       </div>
@@ -53,7 +61,15 @@
       <div class="tabcontent__column-2">
         {% for product in collections['popular'].products limit: 3 offset: 3 %}
           <div class="column-2__product">
-            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">            
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">
+            <div class="column-2__product-price">
+              {% if product.compare_at_price %}
+                <div class="price-original">{{ product.compare_at_price | money }}</div>
+                <div class="price-new">{{ product.price | money }}</div>
+              {% else%}
+                <div class="price-new">{{ product.price | money }}</div>
+              {% endif %}
+            </div>          
           </div>
         {% endfor %}        
       </div>
