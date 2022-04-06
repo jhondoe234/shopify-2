@@ -583,11 +583,6 @@
   .product-bottom-half__extra-descriptions > .tab > button:first-child {
     padding: 15px;
   }
-
-
-
-
-
  
   #London > .tabcontent__tab > #tab__description {
     display: block;
@@ -613,9 +608,58 @@
     display: block;
     padding: 0;
   }
+}
+
+@media screen and (min-width: 1440px) {
+  .product-info__heading, .product-info__avail-code-tags {
+    padding: 0 5%;
+  }
+
+  .alternate-product__product {
+    width: 65%;
+    margin-top: 1%;
+  }
+
+  .product-top-half__product-image {
+    width: 60%;
+  }
+
+  .product-top-half__product-info {
+    width: 70%;
+  }
 
 
+  .product-info__option-selector {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 5%;
+  }
 
+  .product-info__add-buttons {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    padding: 0 5%;
+    padding-right: 0;
+  }
 
+  .product-info__add-buttons > .add-buttons__buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product-info__add-buttons > .add-buttons__buttons > .add-to-cart {
+    margin-bottom: 0;
+  }
+
+  .product-info__description > p {
+    padding: 0 5%;
+  }
+
+  .product-top-half__product-info > .product-info__description > .tabcontent__tab > ul {
+    display: initial;
+    padding: 0 5%;
+  }
 
 }

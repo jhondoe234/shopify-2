@@ -39,3 +39,53 @@
 .multi-collections > .tabcontent__container > .tabcontent {
   display: none;
 }
+
+#Popular {
+  display: flex !important;
+  margin-top: 50px;
+  width: 100%;
+}
+
+#Popular > .tabcontent__column-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+}
+
+#Popular > .tabcontent__column-1 > .column-1__product {
+  height: fit-content;
+}
+
+#Popular > .tabcontent__column-1 > .column-1__product > img {
+  width: 100%;
+  height: auto;
+}
+
+#Popular > .tabcontent__column-1 > .column-1__product:last-child {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+#Popular > .tabcontent__column-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+}
+
+#Popular > .tabcontent__column-2 > .column-2__product {
+  height: fit-content;
+}
+
+#Popular > .tabcontent__column-2 > .column-2__product > img {
+  width: 100%;
+  height: auto;
+}
+
+#Popular > .tabcontent__column-2 > .column-2__product:first-child {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}

@@ -2,7 +2,7 @@
 
 <script>
   window.onload = function() {
-    openCity(event, 'London');    
+    openCity(event, 'Popular');    
   }
   
   function openCity(evt, cityName) {
@@ -32,7 +32,7 @@
 
   <!-- Tab links -->
   <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'London')">Popular</button>
+    <button class="tablinks" onclick="openCity(event, 'Popular')">Popular</button>
     <button class="tablinks" onclick="openCity(event, 'Paris')">New Arrivals</button>
     <button class="tablinks" onclick="openCity(event, 'Tokyo')">Best Sellers</button>
     <button class="tablinks" onclick="openCity(event, 'San_Francisco')">Special Offers</button>
@@ -40,30 +40,23 @@
   </div>
 
   <!-- Tab content -->
-  <div id="London" class="tabcontent">
-    <h3>London</h3>
-    <p>London is the capital city of England.</p>
-
-    <!-- loop over entire collection -->
-    {%- for product in collections['popular'].products limit: 6 -%}
-      <ul class="tabcontent__collection-grid">
-        
-        <!--  -->
-
-
-
-
-      </ul>
-    {%- endfor -%}
-
-
-
-  </div>
-
   <div class="tabcontent__container">
-    <div id="Paris" class="tabcontent">
-      <h3>Paris</h3>
-      <p>Paris is the capital of France.</p>
+    <div id="Popular" class="tabcontent">
+      <div class="tabcontent__column-1">
+        {% for product in collections['popular'].products limit: 3 %}
+          <div class="column-1__product">
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">            
+          </div>
+        {% endfor %}        
+      </div>
+
+      <div class="tabcontent__column-2">
+        {% for product in collections['popular'].products limit: 3 offset: 3 %}
+          <div class="column-2__product">
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">            
+          </div>
+        {% endfor %}        
+      </div>
     </div>
   
     <div id="Tokyo" class="tabcontent">
