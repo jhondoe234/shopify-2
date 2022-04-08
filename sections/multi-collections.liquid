@@ -53,9 +53,18 @@
               {% else%}
                 <div class="price-new">{{ product.price | money }}</div>
               {% endif %}
-            </div>       
+            </div>
+            <div class="column-1__product-description">
+              <h4>{{ product.title }}<span>{{ product.price | money }}</span></h4>
+              <p>{{ product.description }}</p>
+              <div class="icons">
+                <div class="icons__cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="icons__lookbook"><i class="fa-regular fa-heart"></i></div>
+                <div class="icons__compare"><i class="fa-solid fa-arrow-down-left-and-arrow-up-right-to-center"></i><</div>
+              </div>
+            </div>
           </div>
-        {% endfor %}        
+        {% endfor %}
       </div>
 
       <div class="tabcontent__column-2">
@@ -69,7 +78,16 @@
               {% else%}
                 <div class="price-new">{{ product.price | money }}</div>
               {% endif %}
-            </div>          
+            </div>
+            <div class="column-2__product-description">
+              <h4>{{ product.title }}<span>{{ product.price | money }}</span></h4>
+              <p>{{ product.description }}</p>
+              <div class="icons">
+                <div class="icons__cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="icons__lookbook"><i class="fa-regular fa-heart"></i></div>
+                <div class="icons__compare"><i class="fa-solid fa-arrow-down-left-and-arrow-up-right-to-center"></i></div>
+              </div>
+            </div>        
           </div>
         {% endfor %}        
       </div>
