@@ -5,7 +5,7 @@
     openCity(event, 'Popular');    
   }
   
-  function openCity(evt, cityName) {
+  function openCity(event, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -23,7 +23,7 @@
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "flex";
-    evt.currentTarget.className += " active";
+    event.currentTarget.className += " active";
   }
 </script>
 
@@ -33,10 +33,10 @@
   <!-- Tab links -->
   <div class="tab">
     <button class="tablinks" onclick="openCity(event, 'Popular')">Popular</button>
-    <button class="tablinks" onclick="openCity(event, 'Paris')">New Arrivals</button>
-    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Best Sellers</button>
-    <button class="tablinks" onclick="openCity(event, 'San_Francisco')">Special Offers</button>
-    <button class="tablinks" onclick="openCity(event, 'Wuhan')">Coming Soon</button>
+    <button class="tablinks" onclick="openCity(event, 'New_Arrivals')">New Arrivals</button>
+    <button class="tablinks" onclick="openCity(event, 'Best_Sellers')">Best Sellers</button>
+    <button class="tablinks" onclick="openCity(event, 'Special_Offers')">Special Offers</button>
+    <button class="tablinks" onclick="openCity(event, 'Coming_Soon')">Coming Soon</button>
   </div>
 
   <!-- Tab content -->
@@ -45,7 +45,9 @@
       <div class="tabcontent__column-1">
         {% for product in collections['popular'].products limit: 3 %}
           <div class="column-1__product">
-            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">
+            <a href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">              
+            </a>
             <div class="column-1__product-price">
               {% if product.compare_at_price %}
                 <div class="price-original">{{ product.compare_at_price | money }}</div>
@@ -70,7 +72,9 @@
       <div class="tabcontent__column-2">
         {% for product in collections['popular'].products limit: 3 offset: 3 %}
           <div class="column-2__product">
-            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">
+            <a href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">              
+            </a>
             <div class="column-2__product-price">
               {% if product.compare_at_price %}
                 <div class="price-original">{{ product.compare_at_price | money }}</div>
@@ -93,22 +97,22 @@
       </div>
     </div>
 
-    <div id="Paris" class="tabcontent">
+    <div id="New_Arrivals" class="tabcontent">
       <h3>Paris</h3>
       <p>Paris is the capital of Covid19.</p>
     </div>
   
-    <div id="Tokyo" class="tabcontent">
+    <div id="Best_Sellers" class="tabcontent">
       <h3>Tokyo</h3>
       <p>Tokyo is the capital of Japan.</p>
     </div>
   
-    <div id="San_Francisco" class="tabcontent">
+    <div id="Special_Offers" class="tabcontent">
       <h3>San Francisco</h3>
       <p>San Francisco is the capital of California.</p>
     </div>
   
-    <div id="Wuhan" class="tabcontent">
+    <div id="Coming_Soon" class="tabcontent">
       <h3>Wuhan</h3>
       <p>Wuhan is the capital of Covid19.</p>
     </div>

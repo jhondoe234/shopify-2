@@ -52,7 +52,8 @@
 @media screen and (min-width: 380px) {
   .multicolumn2 > .multicolumn2__column {
     width: 90%;
-    margin: 5% auto;    
+    margin: 5% auto;
+    margin-top: 0;
   }
 }
 
