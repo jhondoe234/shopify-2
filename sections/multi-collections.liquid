@@ -22,6 +22,12 @@
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
+    if(window.innerWidth <= 768){
+      document.getElementById(cityName).style.display = "block";
+    } else {
+      document.getElementById(cityName).style.display = "flex";
+    }
+
     document.getElementById(cityName).style.display = "flex";
     event.currentTarget.className += " active";
   }

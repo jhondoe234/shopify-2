@@ -285,3 +285,98 @@
   -moz-box-shadow: 5px 5px 10px rgba(248,248,248,0.64);
 }
 
+@media screen and (min-width: 1440px) {
+
+  #Popular {
+    margin-top: 50px;
+    width: 100%;
+  }
+  
+  #Popular > .tabcontent__column-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+  }
+  
+  #Popular > .tabcontent__column-1 > .column-1__product {
+    /* height: 100%; */
+    background-color: #f8f8f8;
+    margin: 10px;
+    position: relative;
+  }
+  
+  #Popular > .tabcontent__column-1 > .column-1__product > .column-1__product-price {
+    position: absolute;
+    top: 0;
+  }
+  
+  #Popular > .tabcontent__column-1 > .column-1__product:first-child {
+    margin-left: 0;
+    height: 500px;
+  }
+  
+  #Popular > .tabcontent__column-1 > .column-1__product:nth-child(2) {
+    height: 500px;
+  }
+  
+  #Popular > .tabcontent__column-1 > .column-1__product > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #Popular > .tabcontent__column-1 > .column-1__product:last-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    margin-top: 10px;
+    margin-left: 0;
+    height: 700px;
+  }
+  
+  #Popular > .tabcontent__column-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 50%;
+  }
+  
+  #Popular > .tabcontent__column-2 > .column-2__product {
+    /* height: 100%; */
+    background-color: #f8f8f8;
+    margin: 10px;
+    position: relative;
+  }
+  
+  #Popular > .tabcontent__column-2 > .column-2__product > .column-2__product-price {
+    position: absolute;
+    top: 0;
+  }
+  
+  #Popular > .tabcontent__column-2 > .column-2__product > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #Popular > .tabcontent__column-2 > .column-2__product:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-bottom: 10px;
+    height: 700px;
+  }
+  
+  #Popular > .tabcontent__column-2 > .column-2__product:nth-child(2) {
+    margin-top: 10px;
+    height: 500px;
+  }
+  
+  #Popular > .tabcontent__column-2 > .column-2__product:nth-child(3) {
+    margin-top: 10px;
+    height: 500px;
+  }
+
+
+}
