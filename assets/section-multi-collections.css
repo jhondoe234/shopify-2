@@ -137,21 +137,25 @@
 }
 
 .column-1__product-price > .price-new {
-  margin: 0 10px;
+  margin: 5px 15px;
+  font-size: 25px;
 }
 
 .column-1__product-price > .price-original {
-  margin: 0 0 0 10px;
+  margin: 5px 0 0 15px;
   text-decoration: line-through;
+  font-size: 25px;
 }
 
 .column-2__product-price > .price-new {
-  margin: 0 10px;
+  margin: 5px 15px;
+  font-size: 25px;
 }
 
 .column-2__product-price > .price-original {
-  margin: 0 0 0 10px;
+  margin: 5px 0 0 15px;
   text-decoration: line-through;
+  font-size: 25px;
 }
 
 .column-1__product {
