@@ -8,9 +8,44 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "multicolumn2": {
+      "type": "multicolumn2",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "column_description": "Lorem ipsum dolor sit met eras facilisis consectetur adipiscing elit lor, integer lorem consecteur dignissim laciniqui. Elementum mets facilisis ut phahellu.",
+            "column_button_url": "shopify://collections/all",
+            "column_button_text": "view now"
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "column_description": "Pellentesque habitant orbi trisomique senectus et nexus et malesuada fames. Pellentesque laoreet quis enim et mattis. Quisque interdum felis tellus.",
+            "column_button_url": "shopify://collections/all",
+            "column_button_text": "view now"
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "column_description": "See an item you like and click the ♡ button to add it to your cookbook where you can create your own perfect look. It’s like your own boutique!",
+            "column_button_url": "shopify://collections/all",
+            "column_button_text": "view now"
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ]
     }
   },
   "order": [
-    "look-book-page"
+    "look-book-page",
+    "multicolumn2"
   ]
 }
