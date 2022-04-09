@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "look-book-page": {
+      "type": "look-book-page",
+      "settings": {
+        "banner_title_first_word": "our",
+        "banner_subtitle": "latest posts - mens & womens",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "look-book-page"
+  ]
+}

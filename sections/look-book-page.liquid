@@ -1,0 +1,56 @@
+<!-- <link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'"> -->
+<!-- <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'"> -->
+
+<!-- Stylesheets for different pages -->
+<link rel="stylesheet" href="{{ 'page-look-book.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+
+<div class="look-book-page section-{{ section.id }}-padding">
+  <div class="page-width__banner" style="background-image: url('{{ section.settings.banner_background | img_url: 'master' }}')">
+    <div class="page-width__banner-text">
+      <div class="main-page-title__content">
+        <h1 class="main-page-title__first-word">{{ section.settings.banner_title_first_word }}</h1>
+        <h1 class="main-page-title page-title">{{ page.title | escape }}</h1>           
+      </div>
+      <div class="main-page-subtitle__content">
+        <h3 class="main-page-subtitle">{{ section.settings.banner_subtitle }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_background",
+      "label": "Banner Background"
+    },
+    {
+      "type": "text",
+      "id": "banner_title_first_word",
+      "label": "Banner Title - First Word"
+    },
+    {
+      "type": "text",
+      "id": "banner_subtitle",
+      "label": "Banner Subtitle"
+    }
+  ]
+}
+{% endschema %}
+
+
