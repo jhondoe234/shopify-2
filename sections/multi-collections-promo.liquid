@@ -1,0 +1,115 @@
+{{ 'section-multi-collections-promo.css' | asset_url | stylesheet_tag }}
+
+<script>
+  window.onload = function() {
+    openCity(event, 'Latest');    
+  }
+  
+  function openCity(event, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    if(window.innerWidth <= 768){
+      document.getElementById(cityName).style.display = "block";
+    } else if(window.innerWidth > 768) {
+      document.getElementById(cityName).style.display = "flex";
+    }
+    
+    event.currentTarget.className += " active";
+  }
+</script>
+
+<div class="multi-collections-promo">
+  <hr>
+
+  <!-- Tab links -->
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Latest')">Latest</button>
+    <button class="tablinks" onclick="openCity(event, 'Most_Liked')">Most Liked</button>
+    <button class="tablinks" onclick="openCity(event, 'Best_Sellers')">Best Sellers</button>
+    <button class="tablinks" onclick="openCity(event, 'Price_Low_To_High')">Price Low To High</button>
+    <button class="tablinks" onclick="openCity(event, 'Price_High_To_Low')">Price High To Low</button>
+  </div>
+
+  <!-- Tab content -->
+  <div class="tabcontent__container">
+    <div id="Latest" class="tabcontent">
+
+      <div class="tabcontent__grid">
+        {% for product in collections['latest'].products limit: 2 %}
+          <div class="tabcontent__grid-product item">
+            <a href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">              
+            </a>            
+          </div>
+        {% endfor %}
+        <div class="tabcontent__grid-promo item">This is a promo</div>
+        {% for product in collections['latest'].products limit: 4 offset: continue %}
+          <div class="tabcontent__grid-product item">
+            <a href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">              
+            </a>            
+          </div>
+        {% endfor %}
+        <div class="tabcontent__grid-promo item">This is a promo</div>
+        {% for product in collections['latest'].products limit: 4 offset: continue %}
+          <div class="tabcontent__grid-product item">
+            <a href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">              
+            </a>            
+          </div>
+        {% endfor %}
+
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+    <div id="Most_Liked" class="tabcontent">
+      <h3>Most Liked</h3>
+      <p>Most Liked is the capital of Covid19.</p>
+    </div>
+  
+    <div id="Best_Sellers" class="tabcontent">
+      <h3>Best Sellers</h3>
+      <p>Best Sellers is the capital of Japan.</p>
+    </div>
+  
+    <div id="Price_Low_To_High" class="tabcontent">
+      <h3>Price Low To High</h3>
+      <p>Price Low To High is the capital of California.</p>
+    </div>
+  
+    <div id="Price_High_To_Low" class="tabcontent">
+      <h3>Price High To Low</h3>
+      <p>Price High To Low is the capital of Covid19.</p>
+    </div>
+  </div>
+
+
+  <hr>
+</div>
+
+{% schema %}
+  {
+    "name": "multi-collections-promo"
+  }
+{% endschema %}

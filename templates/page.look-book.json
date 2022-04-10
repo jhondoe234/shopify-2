@@ -9,6 +9,9 @@
         "padding_bottom": 28
       }
     },
+    "multi-collections-promo": {
+      "type": "multi-collections-promo"
+    },
     "multicolumn2": {
       "type": "multicolumn2",
       "blocks": {
@@ -46,6 +49,7 @@
   },
   "order": [
     "look-book-page",
+    "multi-collections-promo",
     "multicolumn2"
   ]
 }
