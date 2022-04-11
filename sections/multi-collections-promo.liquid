@@ -47,7 +47,6 @@
   <!-- Tab content -->
   <div class="tabcontent__container">
     <div id="Latest" class="tabcontent">
-
       <div class="tabcontent__grid">
         {% for product in collections['latest'].products limit: 2 %}
           <div class="tabcontent__grid-product item">
@@ -56,7 +55,17 @@
             </a>            
           </div>
         {% endfor %}
-        <div class="tabcontent__grid-promo item">This is a promo</div>
+
+        <div class="tabcontent__grid-promo item" style="background-image: url('{{ section.settings.promo_1_image | image_url }}');">
+          <img src="{{ section.settings.promo_1_title_image | img_url: 'grande' }}" alt="title" loading="lazy" />
+          <h4>{{ section.settings.promo_1_subtitle }}</h4>
+          <p>{{ section.settings.promo_1_description_1 }}</p>
+          <p>{{ section.settings.promo_1_description_2 }}</p>
+          <a href="#">
+            <button>View Now</button>            
+          </a>
+        </div>
+
         {% for product in collections['latest'].products limit: 4 offset: continue %}
           <div class="tabcontent__grid-product item">
             <a href="{{ product.url }}">
@@ -64,7 +73,24 @@
             </a>            
           </div>
         {% endfor %}
-        <div class="tabcontent__grid-promo item">This is a promo</div>
+
+        <div class="tabcontent__grid-promo item" id="promo-2" style="background-image: url('{{ section.settings.promo_2_image | image_url }}');">
+          <div class="item__left">
+            <img src="{{ section.settings.promo_2_title_image | img_url: 'grande' }}" alt="title" loading="lazy" />
+            <h4>{{ section.settings.promo_2_subtitle }}</h4>
+            <p>{{ section.settings.promo_2_description_1 }}</p>
+            <p>{{ section.settings.promo_2_description_2 }}</p>
+            <a href="#">
+              <button>Shop Now</button>            
+            </a>
+            <p class="terms">{{ section.settings.promo_2_terms }}</p>
+          </div>
+          <div class="item__right">
+            <img src="{{ section.settings.promo_2_slogan_image_1 | img_url: 'grande' }}" alt="title" loading="lazy" />
+            <img src="{{ section.settings.promo_2_slogan_image_2 | img_url: 'grande' }}" alt="title" loading="lazy" />
+          </div>
+        </div>
+
         {% for product in collections['latest'].products limit: 4 offset: continue %}
           <div class="tabcontent__grid-product item">
             <a href="{{ product.url }}">
@@ -72,9 +98,6 @@
             </a>            
           </div>
         {% endfor %}
-
-
-
       </div>
 
 
@@ -110,6 +133,75 @@
 
 {% schema %}
   {
-    "name": "multi-collections-promo"
+    "name": "multi-collections-promo",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "promo_1_image",
+        "label": "Promo 1 Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "promo_1_title_image",
+        "label": "Promo 1 Title Image"
+      },
+      {
+        "type": "text",
+        "id": "promo_1_subtitle",
+        "label": "Promo 1 Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "promo_1_description_1",
+        "label": "Promo 1 Description 1"
+      },
+      {
+        "type": "text",
+        "id": "promo_1_description_2",
+        "label": "Promo 1 Description 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "promo_2_image",
+        "label": "Promo 2 Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "promo_2_title_image",
+        "label": "Promo 2 Title Image"
+      },
+      {
+        "type": "text",
+        "id": "promo_2_subtitle",
+        "label": "Promo 2 Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "promo_2_description_1",
+        "label": "Promo 2 Description 1"
+      },
+      {
+        "type": "text",
+        "id": "promo_2_description_2",
+        "label": "Promo 2 Description 2"
+      },
+      {
+        "type": "text",
+        "id": "promo_2_terms",
+        "label": "Promo 2 Terms"
+      },
+      {
+        "type": "image_picker",
+        "id": "promo_2_slogan_image_1",
+        "label": "Promo 2 Slogan Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "promo_2_slogan_image_2",
+        "label": "Promo 2 Slogan Image 2"
+      }
+    ]
   }
 {% endschema %}

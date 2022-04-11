@@ -10,7 +10,16 @@
       }
     },
     "multi-collections-promo": {
-      "type": "multi-collections-promo"
+      "type": "multi-collections-promo",
+      "settings": {
+        "promo_1_subtitle": "Get the look for under &#163;200!",
+        "promo_1_description_1": "We invited actress Jane Marshall to join us for the day and choose her perfect outfit from our vast range of womens fashion.",
+        "promo_1_description_2": "This is of course not true as this is just a design for a website and this is simply filler text.",
+        "promo_2_subtitle": "Add looks or items to your lookbook for a chance of winning",
+        "promo_2_description_1": "See an item or a complete look you like, click the &#9825; button to add it to your lookbook and you'll be automatically entered to our monthly draw where one winner gets a &#xa3;300 gift voucher to spend on our website!",
+        "promo_2_description_2": "Terms: No purchase necessary. Vouchers are non-transferrable and no cash alternative is offered. Competition is for members only.",
+        "promo_2_terms": "Terms: No purchase necessary. Vouchers are non-transferrable and no cash option is given. You must be 18 or over to be eligible. Competition is for members only and is drawn at random."
+      }
     },
     "multicolumn2": {
       "type": "multicolumn2",
