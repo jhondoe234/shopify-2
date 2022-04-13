@@ -56,7 +56,7 @@
           </div>
         {% endfor %}
 
-        <div class="tabcontent__grid-promo item" style="background-image: url('{{ section.settings.promo_1_image | image_url }}');">
+        <div class="tabcontent__grid-promo item" id="promo-1" style="background-image: url('{{ section.settings.promo_1_image | image_url }}');">
           <img src="{{ section.settings.promo_1_title_image | img_url: 'grande' }}" alt="title" loading="lazy" />
           <h4>{{ section.settings.promo_1_subtitle }}</h4>
           <p>{{ section.settings.promo_1_description_1 }}</p>

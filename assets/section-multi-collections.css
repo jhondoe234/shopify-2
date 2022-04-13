@@ -244,6 +244,12 @@
   -moz-box-shadow: 5px 5px 10px rgba(248,248,248,0.64);
 }
 
+#promo-2 {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media screen and (min-width: 1440px) {
 
   #Popular {
