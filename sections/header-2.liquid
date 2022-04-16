@@ -114,16 +114,16 @@
       </div>
       
       <div class="bottom-header__right-container">
-        <nav role="navigation">
+        <nav class="navigation" role="navigation">
           <ul class="menu">
             {%- for link in linklists.bottom-menu.links -%}
               <li>
-                <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+                <a href="{{ link.url }}" class="menu__name" {% if link.active %}aria-current="page"{% endif %}>
                   {{ link.title }}
                 </a>
         
                 {%- if link.links != blank -%}
-                  <ul>
+                  <ul class="menu__block">
                     {%- for child_link in link.links -%}
                       <li>
                         <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
