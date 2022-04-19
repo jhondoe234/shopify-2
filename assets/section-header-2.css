@@ -153,6 +153,7 @@
 .bottom-header__right-container > nav > .menu > li {
   list-style: none;
   padding: 0 20px;
+  position: relative;  
 }
 
 .menu__name {
@@ -162,25 +163,16 @@
 
 .menu__block {
   display: none;
+  position: absolute;
+  z-index: 1;
   border: 1px solid black;
   padding-left: 10px;
   background-color: #f8f8f8;
   margin-top: 20px;
 }
 
-.menu__name:hover~.menu__block {
+.bottom-header__right-container > nav > .menu > li:hover .menu__block {
   display: flex;
-}
-
-
-.navigation {
-  position: relative;
-  top: 100px;
-}
-
-.menu__name:hover~.navigation {
-  position: relative;
-  top: 600px;
 }
 
 .bottom-header__right-container > nav > .menu > li > ul > li {
