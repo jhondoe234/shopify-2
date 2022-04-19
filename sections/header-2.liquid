@@ -123,28 +123,36 @@
                 </a>
         
                 {%- if link.links != blank -%}
-                  <ul class="menu__block">
-                    {%- for child_link in link.links -%}
-                      <li>
-                        <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
-                          {{ child_link.title }}
-                        </a>
-        
-                        {%- if child_link.links != blank -%}
-                          <ul>
-                            {%- for grandchild_link in child_link.links -%}
-                              <li>
-                                <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
-                                  {{ grandchild_link.title }}
-                                </a>
-                              </li>
-                            {%- endfor -%}
-                          </ul>
-                        {%- endif -%}
-        
-                      </li>
-                    {%- endfor -%}
-                  </ul>
+                  <div class="menu__block">
+                    <div class="menu__block-wrapper">
+                      <ul class="menu__block-list">
+                        {%- for child_link in link.links -%}
+                          <li>
+                            <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+                              {{ child_link.title }}
+                            </a>
+            
+                            {%- if child_link.links != blank -%}
+                              <ul>
+                                {%- for grandchild_link in child_link.links -%}
+                                  <li>
+                                    <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+                                      {{ grandchild_link.title }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            {%- endif -%}
+            
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                      <div class="menu__block-promo">
+                        <h4>Autumn Sale!</h4>
+                        <h4>Up to 50% Off</h4>
+                      </div>                        
+                    </div>
+                  </div>
                 {%- endif -%}
         
               </li>
