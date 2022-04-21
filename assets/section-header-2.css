@@ -150,10 +150,29 @@
   padding: 0;
 }
 
+.bottom-header__right-container > nav > .menu > li > .fa-angle-down {
+  color: #333333;
+}
+
+.bottom-header__right-container > nav > .menu > li:hover .menu__name {
+  color: #00c8c8;
+}
+
+.bottom-header__right-container > nav > .menu > li:hover  .fa-angle-down {
+  color: #00c8c8;
+}
+
 .bottom-header__right-container > nav > .menu > li {
   list-style: none;
   padding: 0 20px;
-  position: relative;  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.bottom-header__right-container > nav > .menu > li:hover {
+  cursor: pointer;
 }
 
 .menu__name {
@@ -164,7 +183,7 @@
 .menu__block {
   display: none;
   position: absolute;
-  padding-top: 20px;
+  padding-top: 50px;
   z-index: 1;
 }
 
