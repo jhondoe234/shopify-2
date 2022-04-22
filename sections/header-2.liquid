@@ -99,7 +99,15 @@
           </div>
 
           <div class="right-container__cart-dropdown">
-            <p>This is the cart dropdown</p>
+            <ul>
+              {% if cart == empty %}
+                {{ 'Your Cart is Empty' }}
+              {% else %}
+                {% for item in cart.items %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              {% endif %}
+            </ul>
           </div>          
         </div>
 
