@@ -85,17 +85,24 @@
           <li>Register</li>
           <li>Sign In</li>
         </ul>
-        <ul class="right-container__cart">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <a href="{{ routes.cart_url }}">
-            {%- if cart == empty -%}
-              {{ 'empty' }}
-            {%- else -%}
-              {{ cart.item_count }}
-            {%- endif -%}
-          </a>
-          <i class="fa-light fa-angle-down fa-xs"></i>
-        </ul>
+        <div class="right-container__cart">
+          <div class="right-container__cart-button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="{{ routes.cart_url }}">
+              {%- if cart == empty -%}
+                {{ 'empty' }}
+              {%- else -%}
+                {{ cart.item_count }}
+              {%- endif -%}
+            </a>
+            <i class="fa-light fa-angle-down fa-xs"></i>            
+          </div>
+
+          <div class="right-container__cart-dropdown">
+            <p>This is the cart dropdown</p>
+          </div>          
+        </div>
+
       </div>
     </div>
     <div class="header-2__bottom-header">
