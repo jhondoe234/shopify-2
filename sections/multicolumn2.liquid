@@ -4,7 +4,7 @@
   {%- for block in section.blocks -%}
     <div class="multicolumn2__column" style="background-image: url('{{ block.settings.background_image | img_url: 'master' }}')">
       <div class="multicolumn2__column-content">
-        <img class="multicolumn2__column-title" src="{{ block.settings.column_title | img_url: 'medium' }}" loading="lazy" width="auto" height="auto">
+        <img class="multicolumn2__column-title" src="{{ block.settings.column_title | img_url: 'master' }}" loading="lazy" width="auto" height="auto">
         <p class="multicolumn2__column-description">{{ block.settings.column_description }}</p>
         <a href="{{ section.blocks.settings.column_button_url }}">
           <button class="multicolumn2__column-button">{{ block.settings.column_button_text }}</button>        
