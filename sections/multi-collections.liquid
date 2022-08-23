@@ -51,7 +51,7 @@
         {% for product in collections['popular'].products limit: 3 %}
           <div class="column-1__product">
             <a href="{{ product.url }}">
-              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">              
+              <img src="{{ product.featured_image | img_url: 'master' }}" alt="product_image">              
             </a>
             <div class="column-1__product-price">
               {% if product.compare_at_price %}
@@ -78,7 +78,7 @@
         {% for product in collections['popular'].products limit: 3 offset: 3 %}
           <div class="column-2__product">
             <a href="{{ product.url }}">
-              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="product_image">              
+              <img src="{{ product.featured_image | img_url: 'master' }}" alt="product_image">              
             </a>
             <div class="column-2__product-price">
               {% if product.compare_at_price %}

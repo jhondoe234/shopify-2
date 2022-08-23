@@ -119,8 +119,20 @@
           <div class="product-info__heading-review-social">
             <div class="review-social__review">
               <div class="review-social__container">
-                <div class="review-social__review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-                <div class="review-social__review-number">3 Reviews(s)</div>                
+                <!-- <div class="review-social__review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <div class="review-social__review-number">3 Reviews(s)</div>                 -->
+                <div class="yotpo bottomLine"
+                  data-appkey="3lLBvLxtXto59qFkbJb0OW5hGtCQ7VU2CrOsDGgn"
+                  data-domain="{{shop.permanent_domain | escape }}"
+                  data-product-id="{{ product.id }}"
+                  data-product-models="{{ product.id }}"
+                  data-name="{{ product.title | escape }}"
+                  data-url="{{ shop.url }}{{ product.url }}"
+                  data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+                  data-description="{{ product.description | escape }}"
+                  data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+                </div>
+
               </div>
               <div class="review-social__review-add-review"><span>|</span><p>Add a Review</p><span>|</span></div>
             </div>
