@@ -1,0 +1,31 @@
+{{ 'section-image-banner-2.css' | asset_url | stylesheet_tag }}
+
+<div class="image__banner2">
+  <div class="image__banner2-mobile">
+    <img src="{{ section.settings.mobile_image | img_url: 'master' }}" alt="mobile_image" loading="lazy">
+  </div>
+  <div class="image__banner2-desktop">
+    <img src="{{ section.settings.desktop_image | img_url: 'master' }}" alt="desktop_image" loading="lazy">
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Banner 2",
+  "class": "image__banner2",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    }
+  ]
+}
+{% endschema %}
+
