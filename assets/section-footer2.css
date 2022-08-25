@@ -1,7 +1,7 @@
 .footer2 {
   background-color: #f8f8f8;
   padding-top: 52px;
-  margin-top: 150px;
+  margin-top: 75px; /* 150px */
 }
 
 .footer2 > .footer2__big-footer > .big-footer__top-half {
@@ -19,19 +19,19 @@
 .footer2 > .footer2__big-footer > .big-footer__top-half > .top-half__menu > .top-half__menu-title {
   color: black;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px; /* 12px */
   margin-bottom: 20px;
 }
 
 .footer2 > .footer2__big-footer > .big-footer__top-half > .top-half__menu > .top-half__menu-link {
   color: #727272;
-  font-size: 12px;
+  font-size: 15px; /* 12px */
   /* margin: 5px 0; */
 }
 
 .footer2 > .footer2__big-footer > .big-footer__top-half > .top-half__menu > a > .top-half__menu-link {
   color: #727272;
-  font-size: 12px;
+  font-size: 15px; /* 12px */
   /* margin: 5px 0; */
 }
 

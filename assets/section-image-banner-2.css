@@ -15,10 +15,10 @@
 }
 
 .image__banner2-button > a > button {
-  border: 1px solid black;
+  border: 1px solid #737373;
   padding: 1rem 2rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   background-color: #f8f8f8;
 }
 
