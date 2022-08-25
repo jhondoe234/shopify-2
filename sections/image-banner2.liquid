@@ -7,6 +7,11 @@
   <div class="image__banner2-desktop">
     <img src="{{ section.settings.desktop_image | img_url: 'master' }}" alt="desktop_image" loading="lazy">
   </div>
+  <div class="image__banner2-button">
+    <a href="{{ section.settings.button_url | img_url: 'master' }}">
+      <button>{{ section.settings.button_text }}</button>
+    </a>
+  </div>
 </div>
 
 {% schema %}
@@ -24,6 +29,17 @@
       "type": "image_picker",
       "id": "desktop_image",
       "label": "Desktop Image"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Men's Collection"
     }
   ]
 }
