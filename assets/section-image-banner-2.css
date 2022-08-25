@@ -1,1 +1,20 @@
+.image__banner2-mobile > img, .image__banner2-desktop > img {
+  width: 100%;
+}
 
+.image__banner2-desktop {
+  display: none;
+}
+
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .image__banner2-mobile {
+    display: none;
+  }
+
+  .image__banner2-desktop {
+    display: block;
+  }
+
+}
