@@ -51,7 +51,7 @@
         {% for product in collections['popular'].products limit: 3 %}
           <div class="column-1__product">
             <a href="{{ product.url }}">
-              <img src="{{ product.featured_image | img_url: 'master' }}" alt="product_image">              
+              <img src="{{ product.featured_image | img_url: 'master' }}" alt="product_image" loading="lazy">              
             </a>
             <div class="column-1__product-price">
               {% if product.compare_at_price %}

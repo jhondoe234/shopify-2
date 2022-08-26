@@ -60,12 +60,11 @@
           <div class="hamburger-bar"></div>
         </button>
       </div>
-      {% comment %}
         <div class="mobile-menu__content-logo">
           <a href="{{ routes.root_url }}">
             {%- if section.settings.logo != blank -%}
               <img
-                src="{{ section.settings.logo | img_url: 'medium' }}"
+                src="{{ section.settings.logo | img_url: 'master' }}"
                 loading="lazy"
                 width="auto"
                 height="auto"
@@ -73,8 +72,7 @@
               >
             {%- endif -%}
           </a> 
-        </div>      
-      {% endcomment %}
+        </div>
     </div>
   </div>  
   <div class="header-2__desktop-menu">
